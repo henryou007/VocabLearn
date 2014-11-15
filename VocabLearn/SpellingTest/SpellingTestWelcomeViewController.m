@@ -20,8 +20,12 @@
 
 @implementation SpellingTestWelcomeViewController
 
+static const CGFloat kHeaderViwePadding = 5;
+
 - (instancetype)init {
   if (self = [super initWithStyle:UITableViewStylePlain]) {
+    self.title = @"Spelling Test";
+
     _vocabListStore = [VocabListStore sharedInstance];
   }
   return self;
@@ -39,8 +43,10 @@
   headerLabel.text = @"Please choose the list below to start the Spelling Test.";
   headerLabel.numberOfLines = 0;
 
-  CGSize headerLabelSize = [headerLabel sizeThatFits:bounds.size];
-  headerLabel.frame = CGRectMake(CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetWidth(bounds), headerLabelSize.height);
+  CGFloat width = CGRectGetWidth(bounds) - 2 * kHeaderViwePadding;
+  CGFloat height = CGRectGetHeight(bounds) - 2 *kHeaderViwePadding;
+  CGSize headerLabelSize = [headerLabel sizeThatFits:CGSizeMake(width, height)];
+  headerLabel.frame = CGRectMake(CGRectGetMinX(bounds) + kHeaderViwePadding, CGRectGetMinY(bounds) + kHeaderViwePadding, headerLabelSize.width, headerLabelSize.height);
 
   return headerLabel;
 }

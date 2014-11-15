@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "SpellingTestQuestion.h"
 #import "VocabList.h"
 
 @interface SpellingTestTestController : NSObject
 
-- initWithVocabList:(VocabList *)vocabList;
+- (instancetype)initWithVocabList:(VocabList *)vocabList;
+
+- (SpellingTestQuestion *)nextQuestion;
 
 @end

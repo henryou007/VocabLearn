@@ -25,6 +25,10 @@
 		EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */; };
 		EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */; };
 		EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */; };
+		EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */; };
+		EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */; };
+		EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */; };
+		EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,14 @@
 		EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestTestController.m; path = SpellingTest/SpellingTestTestController.m; sourceTree = "<group>"; };
 		EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestionViewController.h; path = SpellingTest/SpellingTestQuestionViewController.h; sourceTree = "<group>"; };
 		EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestQuestionViewController.m; path = SpellingTest/SpellingTestQuestionViewController.m; sourceTree = "<group>"; };
+		EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestion.h; path = SpellingTest/SpellingTestQuestion.h; sourceTree = "<group>"; };
+		EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestQuestion.m; path = SpellingTest/SpellingTestQuestion.m; sourceTree = "<group>"; };
+		EA78D3461A17D5E6002F9405 /* SpellingTestCharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacterCell.h; path = SpellingTest/SpellingTestCharacterCell.h; sourceTree = "<group>"; };
+		EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterCell.m; path = SpellingTest/SpellingTestCharacterCell.m; sourceTree = "<group>"; };
+		EA78D3491A17D606002F9405 /* SpellingTestCharacterPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacterPickerView.h; path = SpellingTest/SpellingTestCharacterPickerView.h; sourceTree = "<group>"; };
+		EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterPickerView.m; path = SpellingTest/SpellingTestCharacterPickerView.m; sourceTree = "<group>"; };
+		EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestGuessingAreaView.h; path = SpellingTest/SpellingTestGuessingAreaView.h; sourceTree = "<group>"; };
+		EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestGuessingAreaView.m; path = SpellingTest/SpellingTestGuessingAreaView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,14 +194,30 @@
 		EA260A551A17C0CD0049D28F /* Spelling Test */ = {
 			isa = PBXGroup;
 			children = (
+				EA78D3421A17D542002F9405 /* Question View */,
 				EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */,
 				EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */,
-				EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */,
-				EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */,
 				EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */,
 				EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */,
+				EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */,
+				EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */,
 			);
 			name = "Spelling Test";
+			sourceTree = "<group>";
+		};
+		EA78D3421A17D542002F9405 /* Question View */ = {
+			isa = PBXGroup;
+			children = (
+				EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */,
+				EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */,
+				EA78D3461A17D5E6002F9405 /* SpellingTestCharacterCell.h */,
+				EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */,
+				EA78D3491A17D606002F9405 /* SpellingTestCharacterPickerView.h */,
+				EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */,
+				EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */,
+				EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */,
+			);
+			name = "Question View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */,
+				EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */,
 				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
+				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
 				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
 				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,
@@ -306,6 +337,7 @@
 				EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */,
 				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
 				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
+				EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

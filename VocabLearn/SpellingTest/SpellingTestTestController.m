@@ -8,6 +8,8 @@
 
 #import "SpellingTestTestController.h"
 
+#import <stdlib.h>
+
 @interface SpellingTestTestController ()
 
 @property (nonatomic, strong, readonly) VocabList *vocabList;
@@ -21,6 +23,15 @@
     _vocabList = vocabList;
   }
   return self;
+}
+
+- (SpellingTestQuestion *)nextQuestion {
+  NSDictionary *vocabulary = self.vocabList.vocabulary;
+
+  NSUInteger vocabIndex = arc4random_uniform((u_int32_t) vocabulary.count);
+  NSString *word = vocabulary.allKeys[vocabIndex];
+
+  return [[SpellingTestQuestion alloc] initWithWord:word meaning:vocabulary[word]];
 }
 
 @end
