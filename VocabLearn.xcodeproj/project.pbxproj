@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B271A1703FC003EB8FE /* VocabListStore.m */; };
+		A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */; };
+		A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */; };
 		A9EF1FEC1A15C5800017089D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1FEB1A15C5800017089D /* main.m */; };
 		A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1FEE1A15C5800017089D /* AppDelegate.m */; };
-		A9EF1FF21A15C5800017089D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1FF11A15C5800017089D /* ViewController.m */; };
-		A9EF1FF51A15C5800017089D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1FF31A15C5800017089D /* Main.storyboard */; };
 		A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1FF61A15C5800017089D /* Images.xcassets */; };
 		A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1FF81A15C5800017089D /* LaunchScreen.xib */; };
 		A9EF20061A15C5800017089D /* VocabLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20051A15C5800017089D /* VocabLearnTests.m */; };
+		A9EF20121A15C5A50017089D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20101A15C5A50017089D /* MainViewController.m */; };
+		A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20111A15C5A50017089D /* MainViewController.xib */; };
+		A9EF20161A15C9970017089D /* VocabList.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20151A15C9970017089D /* VocabList.m */; };
+		A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201A1A15CBF40017089D /* VocabListCell.m */; };
+		A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF201B1A15CBF40017089D /* VocabListCell.xib */; };
+		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
+		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +35,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9632B261A1703FC003EB8FE /* VocabListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListStore.h; sourceTree = "<group>"; };
+		A9632B271A1703FC003EB8FE /* VocabListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListStore.m; sourceTree = "<group>"; };
+		A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListBrowseViewController.h; sourceTree = "<group>"; };
+		A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListBrowseViewController.m; sourceTree = "<group>"; };
+		A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListBrowseViewController.xib; sourceTree = "<group>"; };
 		A9EF1FE61A15C5800017089D /* VocabLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EF1FEA1A15C5800017089D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9EF1FEB1A15C5800017089D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9EF1FED1A15C5800017089D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9EF1FEE1A15C5800017089D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A9EF1FF01A15C5800017089D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A9EF1FF11A15C5800017089D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A9EF1FF41A15C5800017089D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9EF1FF61A15C5800017089D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9EF1FF91A15C5800017089D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A9EF1FFF1A15C5800017089D /* VocabLearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocabLearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EF20041A15C5800017089D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9EF20051A15C5800017089D /* VocabLearnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VocabLearnTests.m; sourceTree = "<group>"; };
+		A9EF200F1A15C5A50017089D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A9EF20101A15C5A50017089D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A9EF20111A15C5A50017089D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		A9EF20141A15C9970017089D /* VocabList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabList.h; sourceTree = "<group>"; };
+		A9EF20151A15C9970017089D /* VocabList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabList.m; sourceTree = "<group>"; };
+		A9EF20191A15CBF40017089D /* VocabListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCell.h; sourceTree = "<group>"; };
+		A9EF201A1A15CBF40017089D /* VocabListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCell.m; sourceTree = "<group>"; };
+		A9EF201B1A15CBF40017089D /* VocabListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCell.xib; sourceTree = "<group>"; };
+		A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCreationViewController.h; sourceTree = "<group>"; };
+		A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCreationViewController.m; sourceTree = "<group>"; };
+		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +102,13 @@
 		A9EF1FE81A15C5800017089D /* VocabLearn */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF20191A15CBF40017089D /* VocabListCell.h */,
+				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
+				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
+				A9EF20181A15C9B70017089D /* Entities */,
+				A9EF20171A15C9A60017089D /* ViewControllers */,
 				A9EF1FED1A15C5800017089D /* AppDelegate.h */,
 				A9EF1FEE1A15C5800017089D /* AppDelegate.m */,
-				A9EF1FF01A15C5800017089D /* ViewController.h */,
-				A9EF1FF11A15C5800017089D /* ViewController.m */,
-				A9EF1FF31A15C5800017089D /* Main.storyboard */,
 				A9EF1FF61A15C5800017089D /* Images.xcassets */,
 				A9EF1FF81A15C5800017089D /* LaunchScreen.xib */,
 				A9EF1FE91A15C5800017089D /* Supporting Files */,
@@ -117,6 +140,33 @@
 				A9EF20041A15C5800017089D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9EF20171A15C9A60017089D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF200F1A15C5A50017089D /* MainViewController.h */,
+				A9EF20101A15C5A50017089D /* MainViewController.m */,
+				A9EF20111A15C5A50017089D /* MainViewController.xib */,
+				A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */,
+				A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */,
+				A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */,
+				A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */,
+				A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */,
+				A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A9EF20181A15C9B70017089D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF20141A15C9970017089D /* VocabList.h */,
+				A9EF20151A15C9970017089D /* VocabList.m */,
+				A9632B261A1703FC003EB8FE /* VocabListStore.h */,
+				A9632B271A1703FC003EB8FE /* VocabListStore.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +249,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EF1FF51A15C5800017089D /* Main.storyboard in Resources */,
+				A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */,
 				A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */,
+				A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */,
+				A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */,
 				A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */,
+				A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EF1FF21A15C5800017089D /* ViewController.m in Sources */,
 				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
+				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
+				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
+				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,
+				A9EF20161A15C9970017089D /* VocabList.m in Sources */,
+				A9EF20121A15C5A50017089D /* MainViewController.m in Sources */,
+				A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */,
 				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +302,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A9EF1FF31A15C5800017089D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9EF1FF41A15C5800017089D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A9EF1FF81A15C5800017089D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +462,7 @@
 				A9EF200B1A15C5800017089D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9EF200C1A15C5800017089D /* Build configuration list for PBXNativeTarget "VocabLearnTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +471,7 @@
 				A9EF200E1A15C5800017089D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
