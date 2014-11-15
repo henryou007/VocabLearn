@@ -23,6 +23,8 @@
 		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
 		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
 		EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */; };
+		EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */; };
+		EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
 		EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestWelcomeViewController.h; path = SpellingTest/SpellingTestWelcomeViewController.h; sourceTree = "<group>"; };
 		EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestWelcomeViewController.m; path = SpellingTest/SpellingTestWelcomeViewController.m; sourceTree = "<group>"; };
+		EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestTestController.h; path = SpellingTest/SpellingTestTestController.h; sourceTree = "<group>"; };
+		EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestTestController.m; path = SpellingTest/SpellingTestTestController.m; sourceTree = "<group>"; };
+		EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestionViewController.h; path = SpellingTest/SpellingTestQuestionViewController.h; sourceTree = "<group>"; };
+		EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestQuestionViewController.m; path = SpellingTest/SpellingTestQuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,10 @@
 			children = (
 				EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */,
 				EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */,
+				EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */,
+				EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */,
+				EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */,
+				EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */,
 			);
 			name = "Spelling Test";
 			sourceTree = "<group>";
@@ -291,9 +301,11 @@
 				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,
 				A9EF20161A15C9970017089D /* VocabList.m in Sources */,
 				A9EF20121A15C5A50017089D /* MainViewController.m in Sources */,
+				EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */,
 				A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */,
 				EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */,
 				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
+				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

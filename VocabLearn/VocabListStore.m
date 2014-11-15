@@ -21,8 +21,15 @@
     
     dispatch_once(&onceToken, ^{
         if (instance == nil) {
+            VocabList *sampleList = [[VocabList alloc] initWithListName:@"Sample"];
+            // Examples taken from http://www.english-for-students.com/
+            sampleList.vocabulary = @{@"horizon": @"(n) the apparent line connecting the earth and the sky",
+                                      @"host": @"(n) entertainer, innkeeper, an army, multitude",
+                                      @"blur": @"(v) make indistinct, black-out writing",
+                                      };
+
             instance = [[VocabListStore alloc] init];
-            instance.allVocabLists = [NSMutableArray array];
+            instance.allVocabLists = [NSMutableArray arrayWithObject:sampleList];
         }
     });
     

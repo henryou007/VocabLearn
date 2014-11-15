@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpellingTestWelcomeViewController : UIViewController
+@interface SpellingTestWelcomeViewController : UITableViewController
+
+- (instancetype)init;
 
 @end
