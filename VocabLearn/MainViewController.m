@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "SpellingTestWelcomeViewController.h"
 #import "VocabListCell.h"
 #import "VocabListCreationViewController.h"
 #import "VocabList.h"
@@ -28,8 +29,8 @@
     self.vocabListTableView.rowHeight = UITableViewAutomaticDimension;
     self.title = @"VoacbLearn";
     self.navigationController.navigationBar.translucent = NO;
-    
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Spelling Test" style:UIBarButtonItemStylePlain target:self action:@selector(onSpellingTestButtonTap)];
+
     [self.vocabListTableView registerNib:[UINib nibWithNibName:@"VocabListCell" bundle:nil] forCellReuseIdentifier:@"VocabListCell"];
     
     [self.vocabListTableView reloadData];
@@ -64,6 +65,9 @@
     [self.navigationController pushViewController:[[VocabListCreationViewController alloc] init] animated:YES];
 }
 
+- (void)onSpellingTestButtonTap {
+  [self.navigationController pushViewController:[[SpellingTestWelcomeViewController alloc] init] animated:YES];
+}
 
 /*
 #pragma mark - Navigation
