@@ -20,7 +20,7 @@
 @implementation SpellingTestGuessingAreaView
 
 - (instancetype)init {
-  if (self = [super initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]]) {
+  if (self = [super initWithFrame:CGRectZero collectionViewLayout:[self.class createViewLayout]]) {
     self.backgroundColor = [UIColor whiteColor];
     self.dataSource = self;
     self.delegate = self;
@@ -38,8 +38,9 @@
 }
 
 - (void)setCharacterLengthAndResetCharacters:(NSUInteger)characterLength {
+  // It's a bug that reloadData does not refresh the existing cells. This will do the job.
+  [self removeAllCharacters];
   [self.characters removeAllObjects];
-  self.nextCharacterIndex = 0;
   for (int i = 0;i < characterLength;i++) {
     [self.characters addObject:[self.class emptyCharacter]];
   }
@@ -53,6 +54,14 @@
     emptyCharacter = [SpellingTestCharacter characterWithCharacter:'_'];
   });
   return emptyCharacter;
+}
+
++ (UICollectionViewLayout *)createViewLayout {
+  UICollectionViewFlowLayout *viewLayout = [[UICollectionViewFlowLayout alloc] init];
+  viewLayout.minimumInteritemSpacing = 0;
+  viewLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+  viewLayout.itemSize = CGSizeMake(30, 30);
+  return viewLayout;
 }
 
 #pragma mark - Add/Remove Characters
@@ -120,6 +129,10 @@
 }
 
 #pragma mark - UICollectionViewDelegate
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  return indexPath.row < self.nextCharacterIndex;
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   [self deselectItemAtIndexPath:indexPath animated:YES];

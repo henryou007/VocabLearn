@@ -49,8 +49,6 @@
     self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self presentNextQuestion];
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(onDoneButtonTap)];
   }
   return self;
 }
@@ -74,22 +72,22 @@
                           @"deleteButton": self.deleteButton,
                           };
 
-  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[guessingAreaView(200)]-5-[meaningLabel]-5-[characterPickerView(200)]-5-[deleteButton]-(>=5)-|"
+  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[guessingAreaView(40)]-60-[meaningLabel]-5-[characterPickerView(200)]-5-[deleteButton]-(>=5)-|"
                                                                     options:NSLayoutFormatAlignAllCenterX
                                                                     metrics:nil
                                                                       views:views]];
 
-  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[guessingAreaView]-5-|"
+  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[guessingAreaView]-10-|"
                                                                     options:0
                                                                     metrics:nil
                                                                       views:views]];
 
-  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[meaningLabel]-5-|"
+  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[meaningLabel]-10-|"
                                                                     options:0
                                                                     metrics:nil
                                                                       views:views]];
 
-  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[characterPickerView]-5-|"
+  [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[characterPickerView]-10-|"
                                                                     options:0
                                                                     metrics:nil
                                                                       views:views]];
@@ -156,9 +154,10 @@
   [self.characterPickerView deselectCharacter:lastCharacter];
 }
 
-#pragma mark - Done Button
+#pragma mark - Results
 
-- (void)onDoneButtonTap {
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
   NSUInteger correctCount = self.testController.correctCount;
   NSString *message = [NSString stringWithFormat:@"You got %lu question%@ right.", (unsigned long)correctCount, correctCount == 1 ? @"" : @"s"];
   [[[UIAlertView alloc] initWithTitle:@"Result" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];

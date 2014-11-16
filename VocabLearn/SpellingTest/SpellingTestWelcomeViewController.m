@@ -20,8 +20,6 @@
 
 @implementation SpellingTestWelcomeViewController
 
-static const CGFloat kHeaderViwePadding = 5;
-
 - (instancetype)init {
   if (self = [super initWithStyle:UITableViewStylePlain]) {
     self.title = @"Spelling Test";
@@ -29,26 +27,6 @@ static const CGFloat kHeaderViwePadding = 5;
     _vocabListStore = [VocabListStore sharedInstance];
   }
   return self;
-}
-
-- (void)loadView {
-  [super loadView];
-  self.tableView.tableHeaderView = [self createHeaderView];
-}
-
-- (UIView *)createHeaderView {
-  CGRect bounds = self.tableView.bounds;
-
-  UILabel *headerLabel = [[UILabel alloc] init];
-  headerLabel.text = @"Please choose the list below to start the Spelling Test.";
-  headerLabel.numberOfLines = 0;
-
-  CGFloat width = CGRectGetWidth(bounds) - 2 * kHeaderViwePadding;
-  CGFloat height = CGRectGetHeight(bounds) - 2 *kHeaderViwePadding;
-  CGSize headerLabelSize = [headerLabel sizeThatFits:CGSizeMake(width, height)];
-  headerLabel.frame = CGRectMake(CGRectGetMinX(bounds) + kHeaderViwePadding, CGRectGetMinY(bounds) + kHeaderViwePadding, headerLabelSize.width, headerLabelSize.height);
-
-  return headerLabel;
 }
 
 #pragma mark - UITableViewDataSource
@@ -65,6 +43,10 @@ static const CGFloat kHeaderViwePadding = 5;
   VocabList *vocabList = self.vocabListStore.allVocabLists[indexPath.row];
   cell.textLabel.text = vocabList.listName;
   return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+  return @"Select Vocab List to Start";
 }
 
 #pragma mark - UITableViewDelegate
