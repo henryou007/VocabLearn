@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SpellingTestCharacter.h"
+
 @class SpellingTestCharacterPickerView;
 
 @protocol SpellingTestCharacterPickerViewDelegate <NSObject>
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView character:(unichar)character didSelectetAtIndex:(NSUInteger *)index;
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index;
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index;
 
 @end
 
@@ -24,6 +27,7 @@
 
 - (void)setCharactersAndClearSelectionState:(NSArray *)characters;
 
-//- (void)setSelected:(BOOL)selected forCharacterAtIndex:(NSUInteger)index;
+- (void)deselectCharacter:(SpellingTestCharacter *)character;
+- (void)clearSelectionState;
 
 @end

@@ -10,8 +10,9 @@
 
 #import <stdlib.h>
 
-@interface SpellingTestTestController ()
+@interface SpellingTestTestController () <SpellingTestQuestionDelegate>
 
+@property (nonatomic, assign, readwrite) NSUInteger correctCount;
 @property (nonatomic, strong, readonly) VocabList *vocabList;
 
 @end
@@ -31,7 +32,15 @@
   NSUInteger vocabIndex = arc4random_uniform((u_int32_t) vocabulary.count);
   NSString *word = vocabulary.allKeys[vocabIndex];
 
-  return [[SpellingTestQuestion alloc] initWithWord:word meaning:vocabulary[word]];
+  SpellingTestQuestion *question = [[SpellingTestQuestion alloc] initWithWord:word meaning:vocabulary[word]];
+  question.delegate = self;
+  return question;
+}
+
+#pragma mark - SpellingTestQuestionDelegate
+
+- (void)questionDidGuessCorrectly:(SpellingTestQuestion *)question {
+  self.correctCount++;
 }
 
 @end

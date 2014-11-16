@@ -19,6 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:(CGRect)frame]) {
     _characterLabel = [[UILabel alloc] init];
+    self.characterLabel.textAlignment = NSTextAlignmentCenter;
     self.characterLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:self.characterLabel];
 
@@ -47,9 +48,18 @@
 
 @synthesize character = _character;
 
-- (void)setCharacter:(unichar)character {
-  _character = toupper(character);
-  self.characterLabel.text = [NSString stringWithCharacters:&_character length:1];
+- (void)setCharacter:(SpellingTestCharacter *)character {
+  _character = character;
+  self.characterLabel.text = self.character.description;
+}
+
+- (void)setSelected:(BOOL)selected {
+  [super setSelected:selected];
+  if (selected) {
+    self.backgroundColor = [UIColor grayColor];
+  } else {
+    self.backgroundColor = [UIColor whiteColor];
+  }
 }
 
 @end
