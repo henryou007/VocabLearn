@@ -12,5 +12,7 @@
 
 @interface VocabListCreationViewController : UIViewController
 
+// This supports a rename operation for the existing vocab list
+- (id)initWithVocabListIndex: (NSUInteger) index;
 
 @end

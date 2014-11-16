@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "VocabList.h"
+#import "SWTableViewCell.h"
 
-@interface VocabListCell : UITableViewCell
+@interface VocabListCell : SWTableViewCell
 
 @property (weak, nonatomic) VocabList *vocabList;
 

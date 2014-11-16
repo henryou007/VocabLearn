@@ -1,537 +1,1524 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B271A1703FC003EB8FE /* VocabListStore.m */; };
-		A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */; };
-		A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */; };
-		A9EF1FEC1A15C5800017089D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1FEB1A15C5800017089D /* main.m */; };
-		A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF1FEE1A15C5800017089D /* AppDelegate.m */; };
-		A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1FF61A15C5800017089D /* Images.xcassets */; };
-		A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF1FF81A15C5800017089D /* LaunchScreen.xib */; };
-		A9EF20061A15C5800017089D /* VocabLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20051A15C5800017089D /* VocabLearnTests.m */; };
-		A9EF20121A15C5A50017089D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20101A15C5A50017089D /* MainViewController.m */; };
-		A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20111A15C5A50017089D /* MainViewController.xib */; };
-		A9EF20161A15C9970017089D /* VocabList.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF20151A15C9970017089D /* VocabList.m */; };
-		A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201A1A15CBF40017089D /* VocabListCell.m */; };
-		A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF201B1A15CBF40017089D /* VocabListCell.xib */; };
-		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
-		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
-		EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */; };
-		EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */; };
-		EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */; };
-		EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */; };
-		EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */; };
-		EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */; };
-		EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A9EF20001A15C5800017089D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9EF1FDE1A15C5800017089D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9EF1FE51A15C5800017089D;
-			remoteInfo = VocabLearn;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		A9632B261A1703FC003EB8FE /* VocabListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListStore.h; sourceTree = "<group>"; };
-		A9632B271A1703FC003EB8FE /* VocabListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListStore.m; sourceTree = "<group>"; };
-		A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListBrowseViewController.h; sourceTree = "<group>"; };
-		A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListBrowseViewController.m; sourceTree = "<group>"; };
-		A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListBrowseViewController.xib; sourceTree = "<group>"; };
-		A9EF1FE61A15C5800017089D /* VocabLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9EF1FEA1A15C5800017089D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9EF1FEB1A15C5800017089D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9EF1FED1A15C5800017089D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A9EF1FEE1A15C5800017089D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A9EF1FF61A15C5800017089D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A9EF1FF91A15C5800017089D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A9EF1FFF1A15C5800017089D /* VocabLearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocabLearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9EF20041A15C5800017089D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9EF20051A15C5800017089D /* VocabLearnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VocabLearnTests.m; sourceTree = "<group>"; };
-		A9EF200F1A15C5A50017089D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		A9EF20101A15C5A50017089D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		A9EF20111A15C5A50017089D /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		A9EF20141A15C9970017089D /* VocabList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabList.h; sourceTree = "<group>"; };
-		A9EF20151A15C9970017089D /* VocabList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabList.m; sourceTree = "<group>"; };
-		A9EF20191A15CBF40017089D /* VocabListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCell.h; sourceTree = "<group>"; };
-		A9EF201A1A15CBF40017089D /* VocabListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCell.m; sourceTree = "<group>"; };
-		A9EF201B1A15CBF40017089D /* VocabListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCell.xib; sourceTree = "<group>"; };
-		A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCreationViewController.h; sourceTree = "<group>"; };
-		A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCreationViewController.m; sourceTree = "<group>"; };
-		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
-		EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestWelcomeViewController.h; path = SpellingTest/SpellingTestWelcomeViewController.h; sourceTree = "<group>"; };
-		EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestWelcomeViewController.m; path = SpellingTest/SpellingTestWelcomeViewController.m; sourceTree = "<group>"; };
-		EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestTestController.h; path = SpellingTest/SpellingTestTestController.h; sourceTree = "<group>"; };
-		EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestTestController.m; path = SpellingTest/SpellingTestTestController.m; sourceTree = "<group>"; };
-		EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestionViewController.h; path = SpellingTest/SpellingTestQuestionViewController.h; sourceTree = "<group>"; };
-		EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestQuestionViewController.m; path = SpellingTest/SpellingTestQuestionViewController.m; sourceTree = "<group>"; };
-		EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestion.h; path = SpellingTest/SpellingTestQuestion.h; sourceTree = "<group>"; };
-		EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestQuestion.m; path = SpellingTest/SpellingTestQuestion.m; sourceTree = "<group>"; };
-		EA78D3461A17D5E6002F9405 /* SpellingTestCharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacterCell.h; path = SpellingTest/SpellingTestCharacterCell.h; sourceTree = "<group>"; };
-		EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterCell.m; path = SpellingTest/SpellingTestCharacterCell.m; sourceTree = "<group>"; };
-		EA78D3491A17D606002F9405 /* SpellingTestCharacterPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacterPickerView.h; path = SpellingTest/SpellingTestCharacterPickerView.h; sourceTree = "<group>"; };
-		EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterPickerView.m; path = SpellingTest/SpellingTestCharacterPickerView.m; sourceTree = "<group>"; };
-		EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestGuessingAreaView.h; path = SpellingTest/SpellingTestGuessingAreaView.h; sourceTree = "<group>"; };
-		EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestGuessingAreaView.m; path = SpellingTest/SpellingTestGuessingAreaView.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		A9EF1FE31A15C5800017089D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9EF1FFC1A15C5800017089D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		A9EF1FDD1A15C5800017089D = {
-			isa = PBXGroup;
-			children = (
-				A9EF1FE81A15C5800017089D /* VocabLearn */,
-				A9EF20021A15C5800017089D /* VocabLearnTests */,
-				A9EF1FE71A15C5800017089D /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A9EF1FE71A15C5800017089D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF1FE61A15C5800017089D /* VocabLearn.app */,
-				A9EF1FFF1A15C5800017089D /* VocabLearnTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A9EF1FE81A15C5800017089D /* VocabLearn */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF20191A15CBF40017089D /* VocabListCell.h */,
-				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
-				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
-				A9EF20181A15C9B70017089D /* Entities */,
-				A9EF20171A15C9A60017089D /* ViewControllers */,
-				A9EF1FED1A15C5800017089D /* AppDelegate.h */,
-				A9EF1FEE1A15C5800017089D /* AppDelegate.m */,
-				A9EF1FF61A15C5800017089D /* Images.xcassets */,
-				A9EF1FF81A15C5800017089D /* LaunchScreen.xib */,
-				A9EF1FE91A15C5800017089D /* Supporting Files */,
-			);
-			path = VocabLearn;
-			sourceTree = "<group>";
-		};
-		A9EF1FE91A15C5800017089D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF1FEA1A15C5800017089D /* Info.plist */,
-				A9EF1FEB1A15C5800017089D /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A9EF20021A15C5800017089D /* VocabLearnTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF20051A15C5800017089D /* VocabLearnTests.m */,
-				A9EF20031A15C5800017089D /* Supporting Files */,
-			);
-			path = VocabLearnTests;
-			sourceTree = "<group>";
-		};
-		A9EF20031A15C5800017089D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF20041A15C5800017089D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A9EF20171A15C9A60017089D /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				EA260A551A17C0CD0049D28F /* Spelling Test */,
-				A9EF200F1A15C5A50017089D /* MainViewController.h */,
-				A9EF20101A15C5A50017089D /* MainViewController.m */,
-				A9EF20111A15C5A50017089D /* MainViewController.xib */,
-				A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */,
-				A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */,
-				A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */,
-				A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */,
-				A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */,
-				A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		A9EF20181A15C9B70017089D /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				A9EF20141A15C9970017089D /* VocabList.h */,
-				A9EF20151A15C9970017089D /* VocabList.m */,
-				A9632B261A1703FC003EB8FE /* VocabListStore.h */,
-				A9632B271A1703FC003EB8FE /* VocabListStore.m */,
-			);
-			name = Entities;
-			sourceTree = "<group>";
-		};
-		EA260A551A17C0CD0049D28F /* Spelling Test */ = {
-			isa = PBXGroup;
-			children = (
-				EA78D3421A17D542002F9405 /* Question View */,
-				EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */,
-				EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */,
-				EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */,
-				EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */,
-				EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */,
-				EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */,
-			);
-			name = "Spelling Test";
-			sourceTree = "<group>";
-		};
-		EA78D3421A17D542002F9405 /* Question View */ = {
-			isa = PBXGroup;
-			children = (
-				EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */,
-				EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */,
-				EA78D3461A17D5E6002F9405 /* SpellingTestCharacterCell.h */,
-				EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */,
-				EA78D3491A17D606002F9405 /* SpellingTestCharacterPickerView.h */,
-				EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */,
-				EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */,
-				EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */,
-			);
-			name = "Question View";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		A9EF1FE51A15C5800017089D /* VocabLearn */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9EF20091A15C5800017089D /* Build configuration list for PBXNativeTarget "VocabLearn" */;
-			buildPhases = (
-				A9EF1FE21A15C5800017089D /* Sources */,
-				A9EF1FE31A15C5800017089D /* Frameworks */,
-				A9EF1FE41A15C5800017089D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VocabLearn;
-			productName = VocabLearn;
-			productReference = A9EF1FE61A15C5800017089D /* VocabLearn.app */;
-			productType = "com.apple.product-type.application";
-		};
-		A9EF1FFE1A15C5800017089D /* VocabLearnTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9EF200C1A15C5800017089D /* Build configuration list for PBXNativeTarget "VocabLearnTests" */;
-			buildPhases = (
-				A9EF1FFB1A15C5800017089D /* Sources */,
-				A9EF1FFC1A15C5800017089D /* Frameworks */,
-				A9EF1FFD1A15C5800017089D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9EF20011A15C5800017089D /* PBXTargetDependency */,
-			);
-			name = VocabLearnTests;
-			productName = VocabLearnTests;
-			productReference = A9EF1FFF1A15C5800017089D /* VocabLearnTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		A9EF1FDE1A15C5800017089D /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Henryyou;
-				TargetAttributes = {
-					A9EF1FE51A15C5800017089D = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					A9EF1FFE1A15C5800017089D = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = A9EF1FE51A15C5800017089D;
-					};
-				};
-			};
-			buildConfigurationList = A9EF1FE11A15C5800017089D /* Build configuration list for PBXProject "VocabLearn" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = A9EF1FDD1A15C5800017089D;
-			productRefGroup = A9EF1FE71A15C5800017089D /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				A9EF1FE51A15C5800017089D /* VocabLearn */,
-				A9EF1FFE1A15C5800017089D /* VocabLearnTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		A9EF1FE41A15C5800017089D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */,
-				A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */,
-				A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */,
-				A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */,
-				A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */,
-				A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9EF1FFD1A15C5800017089D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		A9EF1FE21A15C5800017089D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */,
-				EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */,
-				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
-				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
-				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
-				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
-				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,
-				A9EF20161A15C9970017089D /* VocabList.m in Sources */,
-				A9EF20121A15C5A50017089D /* MainViewController.m in Sources */,
-				EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */,
-				A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */,
-				EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */,
-				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
-				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
-				EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9EF1FFB1A15C5800017089D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9EF20061A15C5800017089D /* VocabLearnTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A9EF20011A15C5800017089D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9EF1FE51A15C5800017089D /* VocabLearn */;
-			targetProxy = A9EF20001A15C5800017089D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A9EF1FF81A15C5800017089D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9EF1FF91A15C5800017089D /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		A9EF20071A15C5800017089D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		A9EF20081A15C5800017089D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A9EF200A1A15C5800017089D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VocabLearn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A9EF200B1A15C5800017089D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VocabLearn/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A9EF200D1A15C5800017089D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VocabLearnTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VocabLearn.app/VocabLearn";
-			};
-			name = Debug;
-		};
-		A9EF200E1A15C5800017089D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VocabLearnTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VocabLearn.app/VocabLearn";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		A9EF1FE11A15C5800017089D /* Build configuration list for PBXProject "VocabLearn" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9EF20071A15C5800017089D /* Debug */,
-				A9EF20081A15C5800017089D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9EF20091A15C5800017089D /* Build configuration list for PBXNativeTarget "VocabLearn" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9EF200A1A15C5800017089D /* Debug */,
-				A9EF200B1A15C5800017089D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9EF200C1A15C5800017089D /* Build configuration list for PBXNativeTarget "VocabLearnTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9EF200D1A15C5800017089D /* Debug */,
-				A9EF200E1A15C5800017089D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = A9EF1FDE1A15C5800017089D /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>189B31332BA4D6C1D550A55A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>3899FDDC32E6CFF69BCBC008</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E91EAF6F7F0F457434DFA3F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4E9C046BD1995DDD68F5EABB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4E9C046BD1995DDD68F5EABB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>682371BCA489C4D2DB7CC222</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6DDFE25D010B172E55ABF4CD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3899FDDC32E6CFF69BCBC008</string>
+				<string>F5DF1409AA78B25E9457D551</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B261A1703FC003EB8FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VocabListStore.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B271A1703FC003EB8FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabListStore.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B281A1703FC003EB8FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9632B271A1703FC003EB8FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9632B291A173C5E003EB8FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VocabListBrowseViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B2A1A173C5E003EB8FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabListBrowseViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B2B1A173C5E003EB8FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>VocabListBrowseViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9632B2C1A173C5E003EB8FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9632B2A1A173C5E003EB8FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9632B2D1A173C5E003EB8FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9632B2B1A173C5E003EB8FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF1FDD1A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF1FE81A15C5800017089D</string>
+				<string>A9EF20021A15C5800017089D</string>
+				<string>A9EF1FE71A15C5800017089D</string>
+				<string>6DDFE25D010B172E55ABF4CD</string>
+				<string>C0142DE3DB168625C384B821</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FDE1A15C5800017089D</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Henryyou</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>A9EF1FE51A15C5800017089D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+					</dict>
+					<key>A9EF1FFE1A15C5800017089D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+						<key>TestTargetID</key>
+						<string>A9EF1FE51A15C5800017089D</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>A9EF1FE11A15C5800017089D</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>A9EF1FDD1A15C5800017089D</string>
+			<key>productRefGroup</key>
+			<string>A9EF1FE71A15C5800017089D</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>A9EF1FE51A15C5800017089D</string>
+				<string>A9EF1FFE1A15C5800017089D</string>
+			</array>
+		</dict>
+		<key>A9EF1FE11A15C5800017089D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A9EF20071A15C5800017089D</string>
+				<string>A9EF20081A15C5800017089D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A9EF1FE21A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EA78D3481A17D5E6002F9405</string>
+				<string>EA78D34E1A17D61C002F9405</string>
+				<string>A9EF1FEF1A15C5800017089D</string>
+				<string>EA78D34B1A17D606002F9405</string>
+				<string>A9632B281A1703FC003EB8FE</string>
+				<string>A9632B2C1A173C5E003EB8FE</string>
+				<string>A9EF20211A15CE390017089D</string>
+				<string>A9EF20161A15C9970017089D</string>
+				<string>A9EF20121A15C5A50017089D</string>
+				<string>EA78D33E1A17CED8002F9405</string>
+				<string>A9EF201C1A15CBF40017089D</string>
+				<string>EA260A581A17C1A00049D28F</string>
+				<string>A9EF1FEC1A15C5800017089D</string>
+				<string>EA78D33B1A17CDE7002F9405</string>
+				<string>EA78D3411A17D315002F9405</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FE31A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3E91EAF6F7F0F457434DFA3F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FE41A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A9632B2D1A173C5E003EB8FE</string>
+				<string>A9EF1FFA1A15C5800017089D</string>
+				<string>A9EF201D1A15CBF40017089D</string>
+				<string>A9EF20131A15C5A50017089D</string>
+				<string>A9EF1FF71A15C5800017089D</string>
+				<string>A9EF20221A15CE390017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FE51A15C5800017089D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A9EF20091A15C5800017089D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>189B31332BA4D6C1D550A55A</string>
+				<string>A9EF1FE21A15C5800017089D</string>
+				<string>A9EF1FE31A15C5800017089D</string>
+				<string>A9EF1FE41A15C5800017089D</string>
+				<string>682371BCA489C4D2DB7CC222</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VocabLearn</string>
+			<key>productName</key>
+			<string>VocabLearn</string>
+			<key>productReference</key>
+			<string>A9EF1FE61A15C5800017089D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>A9EF1FE61A15C5800017089D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VocabLearn.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A9EF1FE71A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF1FE61A15C5800017089D</string>
+				<string>A9EF1FFF1A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FE81A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF20191A15CBF40017089D</string>
+				<string>A9EF201A1A15CBF40017089D</string>
+				<string>A9EF201B1A15CBF40017089D</string>
+				<string>A9EF20181A15C9B70017089D</string>
+				<string>A9EF20171A15C9A60017089D</string>
+				<string>A9EF1FED1A15C5800017089D</string>
+				<string>A9EF1FEE1A15C5800017089D</string>
+				<string>A9EF1FF61A15C5800017089D</string>
+				<string>A9EF1FF81A15C5800017089D</string>
+				<string>A9EF1FE91A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>VocabLearn</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FE91A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF1FEA1A15C5800017089D</string>
+				<string>A9EF1FEB1A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FEA1A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FEB1A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FEC1A15C5800017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF1FEB1A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF1FED1A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FEE1A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FEF1A15C5800017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF1FEE1A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF1FF61A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FF71A15C5800017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF1FF61A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF1FF81A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF1FF91A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FF91A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF1FFA1A15C5800017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF1FF81A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF1FFB1A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A9EF20061A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FFC1A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FFD1A15C5800017089D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A9EF1FFE1A15C5800017089D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>A9EF200C1A15C5800017089D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A9EF1FFB1A15C5800017089D</string>
+				<string>A9EF1FFC1A15C5800017089D</string>
+				<string>A9EF1FFD1A15C5800017089D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>A9EF20011A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VocabLearnTests</string>
+			<key>productName</key>
+			<string>VocabLearnTests</string>
+			<key>productReference</key>
+			<string>A9EF1FFF1A15C5800017089D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>A9EF1FFF1A15C5800017089D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VocabLearnTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A9EF20001A15C5800017089D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>A9EF1FDE1A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A9EF1FE51A15C5800017089D</string>
+			<key>remoteInfo</key>
+			<string>VocabLearn</string>
+		</dict>
+		<key>A9EF20011A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>A9EF1FE51A15C5800017089D</string>
+			<key>targetProxy</key>
+			<string>A9EF20001A15C5800017089D</string>
+		</dict>
+		<key>A9EF20021A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF20051A15C5800017089D</string>
+				<string>A9EF20031A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>VocabLearnTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20031A15C5800017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF20041A15C5800017089D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20041A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20051A15C5800017089D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabLearnTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20061A15C5800017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF20051A15C5800017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF20071A15C5800017089D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A9EF20081A15C5800017089D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A9EF20091A15C5800017089D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A9EF200A1A15C5800017089D</string>
+				<string>A9EF200B1A15C5800017089D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A9EF200A1A15C5800017089D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3899FDDC32E6CFF69BCBC008</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VocabLearn/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A9EF200B1A15C5800017089D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F5DF1409AA78B25E9457D551</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VocabLearn/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A9EF200C1A15C5800017089D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A9EF200D1A15C5800017089D</string>
+				<string>A9EF200E1A15C5800017089D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A9EF200D1A15C5800017089D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>VocabLearnTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/VocabLearn.app/VocabLearn</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A9EF200E1A15C5800017089D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>VocabLearnTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/VocabLearn.app/VocabLearn</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A9EF200F1A15C5A50017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20101A15C5A50017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20111A15C5A50017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MainViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20121A15C5A50017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF20101A15C5A50017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF20131A15C5A50017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF20111A15C5A50017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF20141A15C9970017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VocabList.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20151A15C9970017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabList.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20161A15C9970017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF20151A15C9970017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF20171A15C9A60017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EA260A551A17C0CD0049D28F</string>
+				<string>A9EF200F1A15C5A50017089D</string>
+				<string>A9EF20101A15C5A50017089D</string>
+				<string>A9EF20111A15C5A50017089D</string>
+				<string>A9EF201E1A15CE390017089D</string>
+				<string>A9EF201F1A15CE390017089D</string>
+				<string>A9EF20201A15CE390017089D</string>
+				<string>A9632B291A173C5E003EB8FE</string>
+				<string>A9632B2A1A173C5E003EB8FE</string>
+				<string>A9632B2B1A173C5E003EB8FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20181A15C9B70017089D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A9EF20141A15C9970017089D</string>
+				<string>A9EF20151A15C9970017089D</string>
+				<string>A9632B261A1703FC003EB8FE</string>
+				<string>A9632B271A1703FC003EB8FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Entities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20191A15CBF40017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VocabListCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF201A1A15CBF40017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabListCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF201B1A15CBF40017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>VocabListCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF201C1A15CBF40017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF201A1A15CBF40017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF201D1A15CBF40017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF201B1A15CBF40017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF201E1A15CE390017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>VocabListCreationViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF201F1A15CE390017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VocabListCreationViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20201A15CE390017089D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>VocabListCreationViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A9EF20211A15CE390017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF201F1A15CE390017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A9EF20221A15CE390017089D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A9EF20201A15CE390017089D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C0142DE3DB168625C384B821</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4E9C046BD1995DDD68F5EABB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA260A551A17C0CD0049D28F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EA78D3421A17D542002F9405</string>
+				<string>EA260A561A17C1A00049D28F</string>
+				<string>EA260A571A17C1A00049D28F</string>
+				<string>EA78D3391A17CDE7002F9405</string>
+				<string>EA78D33A1A17CDE7002F9405</string>
+				<string>EA78D33F1A17D315002F9405</string>
+				<string>EA78D3401A17D315002F9405</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Spelling Test</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA260A561A17C1A00049D28F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestWelcomeViewController.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestWelcomeViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA260A571A17C1A00049D28F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestWelcomeViewController.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestWelcomeViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA260A581A17C1A00049D28F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA260A571A17C1A00049D28F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D3391A17CDE7002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestTestController.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestTestController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D33A1A17CDE7002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestTestController.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestTestController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D33B1A17CDE7002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D33A1A17CDE7002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D33C1A17CED8002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestQuestionViewController.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestQuestionViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D33D1A17CED8002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestQuestionViewController.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestQuestionViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D33E1A17CED8002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D33D1A17CED8002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D33F1A17D315002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestQuestion.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestQuestion.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D3401A17D315002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestQuestion.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestQuestion.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D3411A17D315002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D3401A17D315002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D3421A17D542002F9405</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EA78D33C1A17CED8002F9405</string>
+				<string>EA78D33D1A17CED8002F9405</string>
+				<string>EA78D3461A17D5E6002F9405</string>
+				<string>EA78D3471A17D5E6002F9405</string>
+				<string>EA78D3491A17D606002F9405</string>
+				<string>EA78D34A1A17D606002F9405</string>
+				<string>EA78D34C1A17D61C002F9405</string>
+				<string>EA78D34D1A17D61C002F9405</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Question View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D3461A17D5E6002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestCharacterCell.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestCharacterCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D3471A17D5E6002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestCharacterCell.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestCharacterCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D3481A17D5E6002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D3471A17D5E6002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D3491A17D606002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestCharacterPickerView.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestCharacterPickerView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D34A1A17D606002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestCharacterPickerView.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestCharacterPickerView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D34B1A17D606002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D34A1A17D606002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA78D34C1A17D61C002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SpellingTestGuessingAreaView.h</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestGuessingAreaView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D34D1A17D61C002F9405</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SpellingTestGuessingAreaView.m</string>
+			<key>path</key>
+			<string>SpellingTest/SpellingTestGuessingAreaView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EA78D34E1A17D61C002F9405</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA78D34D1A17D61C002F9405</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F5DF1409AA78B25E9457D551</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>A9EF1FDE1A15C5800017089D</string>
+</dict>
+</plist>

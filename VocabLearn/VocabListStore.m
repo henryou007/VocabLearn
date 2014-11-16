@@ -41,5 +41,16 @@
     [self.allVocabLists addObject:vocabList];
 }
 
+- (void) removeVocabListAtIndex: (NSUInteger)index {
+    [self.allVocabLists removeObjectAtIndex:index];
+}
+
+- (void) replaceVocabListAtIndex: (NSUInteger)index withVocabList: (VocabList *) vocabList {
+    [self.allVocabLists replaceObjectAtIndex:index withObject:vocabList];
+}
+
+- (VocabList *) getVocabListAtIndex: (NSUInteger)index {
+    return [self.allVocabLists objectAtIndex:index];
+}
 
 @end

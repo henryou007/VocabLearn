@@ -15,6 +15,12 @@
 
 - (void) addVocabList:(VocabList *)vocabList;
 
+- (void) removeVocabListAtIndex: (NSUInteger)index;
+
+- (void) replaceVocabListAtIndex: (NSUInteger)index withVocabList: (VocabList *) vocabList;
+
+- (VocabList *) getVocabListAtIndex: (NSUInteger)index;
+
 @property (strong, nonatomic) NSMutableArray *allVocabLists;
 
 @end
