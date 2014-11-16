@@ -8,12 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@class SpellingTestGuessingAreaView;
+
+@protocol SpellingTestGuessingAreaViewDelegate <NSObject>
+
+- (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didSelectNonEmptyCharacter:(unichar)character atIndex:(NSUInteger)index;
+- (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didReachCharacterLengthWithCharacters:(NSArray *)characters;
+
+@end
+
 @interface SpellingTestGuessingAreaView : UICollectionView
+
+@property (nonatomic, weak, readwrite) id<SpellingTestGuessingAreaViewDelegate> guessingAreaDelegate;
 
 @property (nonatomic, assign, readonly) NSUInteger characterLength;
 
 - (void)setCharacterLengthAndResetCharacters:(NSUInteger)characterLength;
 
-- (void)setCharacter:(unichar)character atIndex:(NSUInteger)index;
+- (void)addCharacter:(unichar)character;
+- (void)removeCharacter:(unichar)character;
+- (void)removeCharacterAtIndex:(NSUInteger)index;
+- (unichar)removeLastCharacter;
+- (void)removeAllCharacters;
 
 @end

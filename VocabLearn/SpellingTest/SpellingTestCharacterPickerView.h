@@ -12,7 +12,8 @@
 
 @protocol SpellingTestCharacterPickerViewDelegate <NSObject>
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView character:(unichar)character didSelectetAtIndex:(NSUInteger *)index;
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(unichar)character atIndex:(NSUInteger)index;
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(unichar)character atIndex:(NSUInteger)index;
 
 @end
 
@@ -24,6 +25,7 @@
 
 - (void)setCharactersAndClearSelectionState:(NSArray *)characters;
 
-//- (void)setSelected:(BOOL)selected forCharacterAtIndex:(NSUInteger)index;
+- (void)deselectCharacter:(unichar)character;
+- (void)clearSelectionState;
 
 @end

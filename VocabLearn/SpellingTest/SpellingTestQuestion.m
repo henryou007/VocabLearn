@@ -34,7 +34,7 @@ static const NSUInteger kExtraPlayableCharacters = 5;
     return NO;
   }
   for (int i = 0;i < self.word.length;i++) {
-    if ([self.word characterAtIndex:i] != [guessingCharacters[i] unsignedShortValue]) {
+    if (tolower([self.word characterAtIndex:i]) != tolower([guessingCharacters[i] unsignedShortValue])) {
       return NO;
     }
   }
@@ -55,7 +55,7 @@ static const NSUInteger kExtraPlayableCharacters = 5;
     [playableCharacters addObject:@([word characterAtIndex:i])];
   }
   for (int i = 0;i < kExtraPlayableCharacters;i++) {
-    unichar randomChar = arc4random_uniform('Z'-'A' + 1) + 'A';
+    unichar randomChar = arc4random_uniform('z'-'a' + 1) + 'a';
     [playableCharacters addObject:@(randomChar)];
   }
   for (int i = 0;i < playableCharacters.count;i++) {
