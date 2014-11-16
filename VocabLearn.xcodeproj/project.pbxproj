@@ -23,6 +23,7 @@
 		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
 		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
 		EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */; };
+		EA697C321A19238A00F5F608 /* SpellingTestCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA697C311A19238A00F5F608 /* SpellingTestCharacter.m */; };
 		EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */; };
 		EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */; };
 		EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */; };
@@ -70,6 +71,8 @@
 		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
 		EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestWelcomeViewController.h; path = SpellingTest/SpellingTestWelcomeViewController.h; sourceTree = "<group>"; };
 		EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestWelcomeViewController.m; path = SpellingTest/SpellingTestWelcomeViewController.m; sourceTree = "<group>"; };
+		EA697C301A19238A00F5F608 /* SpellingTestCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacter.h; path = SpellingTest/SpellingTestCharacter.h; sourceTree = "<group>"; };
+		EA697C311A19238A00F5F608 /* SpellingTestCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacter.m; path = SpellingTest/SpellingTestCharacter.m; sourceTree = "<group>"; };
 		EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestTestController.h; path = SpellingTest/SpellingTestTestController.h; sourceTree = "<group>"; };
 		EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestTestController.m; path = SpellingTest/SpellingTestTestController.m; sourceTree = "<group>"; };
 		EA78D33C1A17CED8002F9405 /* SpellingTestQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestQuestionViewController.h; path = SpellingTest/SpellingTestQuestionViewController.h; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */,
 				EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */,
 				EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */,
+				EA697C301A19238A00F5F608 /* SpellingTestCharacter.h */,
+				EA697C311A19238A00F5F608 /* SpellingTestCharacter.m */,
 			);
 			name = "Spelling Test";
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */,
 				EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */,
 				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
+				EA697C321A19238A00F5F608 /* SpellingTestCharacter.m in Sources */,
 				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
 				EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */,
 			);

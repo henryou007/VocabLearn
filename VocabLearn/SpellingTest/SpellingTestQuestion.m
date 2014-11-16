@@ -8,6 +8,8 @@
 
 #import "SpellingTestQuestion.h"
 
+#import "SpellingTestCharacter.h"
+
 #import <stdlib.h>
 
 @interface SpellingTestQuestion ()
@@ -34,7 +36,7 @@ static const NSUInteger kExtraPlayableCharacters = 5;
     return NO;
   }
   for (int i = 0;i < self.word.length;i++) {
-    if (tolower([self.word characterAtIndex:i]) != tolower([guessingCharacters[i] unsignedShortValue])) {
+    if (![guessingCharacters[i] isEqualToUnichar:[self.word characterAtIndex:i]]) {
       return NO;
     }
   }
@@ -53,11 +55,11 @@ static const NSUInteger kExtraPlayableCharacters = 5;
 + (NSArray *)generatePlayableCharactersWithWord:(NSString *)word {
   NSMutableArray *playableCharacters = [NSMutableArray arrayWithCapacity:word.length + kExtraPlayableCharacters];
   for (int i = 0;i < word.length;i++) {
-    [playableCharacters addObject:@([word characterAtIndex:i])];
+    [playableCharacters addObject:[SpellingTestCharacter characterWithCharacter:[word characterAtIndex:i]]];
   }
   for (int i = 0;i < kExtraPlayableCharacters;i++) {
     unichar randomChar = arc4random_uniform('z'-'a' + 1) + 'a';
-    [playableCharacters addObject:@(randomChar)];
+    [playableCharacters addObject:[SpellingTestCharacter characterWithCharacter:randomChar]];
   }
   for (int i = 0;i < playableCharacters.count;i++) {
     [playableCharacters exchangeObjectAtIndex:i withObjectAtIndex:arc4random_uniform((u_int32_t) (playableCharacters.count - i)) + i];

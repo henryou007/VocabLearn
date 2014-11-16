@@ -37,8 +37,8 @@
   [self reloadData];
 }
 
-- (void)deselectCharacter:(unichar)character {
-  NSUInteger index = [self.characters indexOfObject:@(character)];
+- (void)deselectCharacter:(SpellingTestCharacter *)character {
+  NSUInteger index = [self.characters indexOfObject:character];
   NSAssert(index != NSNotFound, @"Could not find the character");
   [self deselectCharacterAtIndex:index];
 }
@@ -61,7 +61,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   SpellingTestCharacterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-  cell.character = [self.characters[indexPath.row] unsignedShortValue];
+  cell.character = self.characters[indexPath.row];
   return cell;
 }
 
@@ -69,12 +69,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   NSUInteger index = indexPath.row;
-  [self.characterPickerDelegate characterPickerView:self didSelectCharacter:[self.characters[index] unsignedShortValue] atIndex:index];
+  [self.characterPickerDelegate characterPickerView:self didSelectCharacter:self.characters[index] atIndex:index];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
   NSUInteger index = indexPath.row;
-  [self.characterPickerDelegate characterPickerView:self didDeselectCharacter:[self.characters[index] unsignedShortValue] atIndex:index];
+  [self.characterPickerDelegate characterPickerView:self didDeselectCharacter:self.characters[index] atIndex:index];
 }
 
 @end

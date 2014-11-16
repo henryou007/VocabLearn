@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SpellingTestCharacter.h"
+
 @interface SpellingTestCharacterCell : UICollectionViewCell
 
-@property (nonatomic, assign, readwrite) unichar character;
+@property (nonatomic, assign, readwrite) SpellingTestCharacter *character;
 
 @end

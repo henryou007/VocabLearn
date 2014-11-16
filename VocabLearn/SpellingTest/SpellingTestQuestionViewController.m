@@ -8,6 +8,7 @@
 
 #import "SpellingTestQuestionViewController.h"
 
+#import "SpellingTestCharacter.h"
 #import "SpellingTestCharacterPickerView.h"
 #import "SpellingTestGuessingAreaView.h"
 
@@ -115,18 +116,18 @@
 
 #pragma mark - SpellingTestCharacterPickerViewDelegate
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(unichar)character atIndex:(NSUInteger)index {
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
   [self.guessingAreaView addCharacter:character];
   self.deleteButton.enabled = YES;
 }
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(unichar)character atIndex:(NSUInteger)index {
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
   [self.guessingAreaView removeCharacter:character];
 }
 
 #pragma mark - SpellingTestGuessingAreaViewDelegate
 
-- (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didSelectNonEmptyCharacter:(unichar)character atIndex:(NSUInteger)index {
+- (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didSelectNonEmptyCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
   [guessingAreaView removeCharacterAtIndex:index];
   [self.characterPickerView deselectCharacter:character];
 }
@@ -151,7 +152,7 @@
 #pragma mark - Delete Button
 
 - (void)onDeleteButtonTap {
-  unichar lastCharacter = [self.guessingAreaView removeLastCharacter];
+  SpellingTestCharacter * lastCharacter = [self.guessingAreaView removeLastCharacter];
   [self.characterPickerView deselectCharacter:lastCharacter];
 }
 

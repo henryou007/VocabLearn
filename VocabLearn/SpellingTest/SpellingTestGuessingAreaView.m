@@ -19,8 +19,6 @@
 
 @implementation SpellingTestGuessingAreaView
 
-static const unichar kEmptyCharacter = '_';
-
 - (instancetype)init {
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]]) {
     self.backgroundColor = [UIColor whiteColor];
@@ -43,14 +41,23 @@ static const unichar kEmptyCharacter = '_';
   [self.characters removeAllObjects];
   self.nextCharacterIndex = 0;
   for (int i = 0;i < characterLength;i++) {
-    [self.characters addObject:@(kEmptyCharacter)];
+    [self.characters addObject:[self.class emptyCharacter]];
   }
   [self reloadData];
 }
 
++ (SpellingTestCharacter *)emptyCharacter {
+  static SpellingTestCharacter *emptyCharacter;
+  static dispatch_once_t once;
+  dispatch_once(&once, ^{
+    emptyCharacter = [SpellingTestCharacter characterWithCharacter:'_'];
+  });
+  return emptyCharacter;
+}
+
 #pragma mark - Add/Remove Characters
 
-- (void)addCharacter:(unichar)character {
+- (void)addCharacter:(SpellingTestCharacter *)character {
   NSAssert(self.nextCharacterIndex < self.characterLength, @"Cannot add more character.");
   [self setCharacter:character atIndex:self.nextCharacterIndex++];
   if (self.nextCharacterIndex == self.characterLength) {
@@ -60,24 +67,24 @@ static const unichar kEmptyCharacter = '_';
   }
 }
 
-- (void)removeCharacter:(unichar)character {
-  NSUInteger index = [self.characters indexOfObject:@(character)];
-  NSAssert(index != NSNotFound, @"Could not find '%c' so cannot remove it.", character);
+- (void)removeCharacter:(SpellingTestCharacter *)character {
+  NSUInteger index = [self.characters indexOfObject:character];
+  NSAssert(index != NSNotFound, @"Could not find '%@' so cannot remove it.", character);
   [self removeCharacterAtIndex:index];
 }
 
 - (void)removeCharacterAtIndex:(NSUInteger)index {
   NSAssert(index < self.nextCharacterIndex, @"Index out of bounds");
   for (NSUInteger i = index;i < self.nextCharacterIndex - 1;i++) {
-    [self setCharacter:[self.characters[i + 1] unsignedShortValue] atIndex:i];
+    [self setCharacter:self.characters[i + 1] atIndex:i];
   }
   [self removeLastCharacter];
 }
 
-- (unichar)removeLastCharacter {
+- (SpellingTestCharacter *)removeLastCharacter {
   NSAssert(self.nextCharacterIndex > 0, @"No character to delete");
-  unichar lastCharacter = [self.characters[--self.nextCharacterIndex] unsignedShortValue];
-  [self setCharacter:kEmptyCharacter atIndex:self.nextCharacterIndex];
+  SpellingTestCharacter * lastCharacter = self.characters[--self.nextCharacterIndex];
+  [self setCharacter:[self.class emptyCharacter] atIndex:self.nextCharacterIndex];
   if (!self.nextCharacterIndex) {
     dispatch_after(0, dispatch_get_main_queue(), ^{
       [self.guessingAreaDelegate guessingAreaViewDidHaveNoCharacters:self];
@@ -92,10 +99,10 @@ static const unichar kEmptyCharacter = '_';
   }
 }
 
-- (void)setCharacter:(unichar)character atIndex:(NSUInteger)index {
-  unichar oldCharacter = [self.characters[index] unsignedShortValue];
-  if (oldCharacter != character) {
-    self.characters[index] = @(character);
+- (void)setCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
+  SpellingTestCharacter * oldCharacter = self.characters[index];
+  if (![oldCharacter isEqualToCharacter:character]) {
+    self.characters[index] = character;
     [self reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:index inSection:0]]];
   }
 }
@@ -108,7 +115,7 @@ static const unichar kEmptyCharacter = '_';
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   SpellingTestCharacterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-  cell.character = [self.characters[indexPath.row] unsignedShortValue];
+  cell.character = self.characters[indexPath.row];
   return cell;
 }
 
@@ -118,7 +125,7 @@ static const unichar kEmptyCharacter = '_';
   [self deselectItemAtIndexPath:indexPath animated:YES];
   NSUInteger index = indexPath.row;
   if (index < self.nextCharacterIndex) {
-    [self.guessingAreaDelegate guessingAreaView:self didSelectNonEmptyCharacter:[self.characters[index] unsignedShortValue] atIndex:index];
+    [self.guessingAreaDelegate guessingAreaView:self didSelectNonEmptyCharacter:self.characters[index] atIndex:index];
   }
 }
 
