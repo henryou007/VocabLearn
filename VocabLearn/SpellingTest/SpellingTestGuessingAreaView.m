@@ -54,7 +54,9 @@ static const unichar kEmptyCharacter = '_';
   NSAssert(self.nextCharacterIndex < self.characterLength, @"Cannot add more character.");
   [self setCharacter:character atIndex:self.nextCharacterIndex++];
   if (self.nextCharacterIndex == self.characterLength) {
-    [self.guessingAreaDelegate guessingAreaView:self didReachCharacterLengthWithCharacters:self.characters];
+    dispatch_after(0, dispatch_get_main_queue(), ^{
+      [self.guessingAreaDelegate guessingAreaView:self didReachCharacterLengthWithCharacters:self.characters];
+    });
   }
 }
 
@@ -76,6 +78,11 @@ static const unichar kEmptyCharacter = '_';
   NSAssert(self.nextCharacterIndex > 0, @"No character to delete");
   unichar lastCharacter = [self.characters[--self.nextCharacterIndex] unsignedShortValue];
   [self setCharacter:kEmptyCharacter atIndex:self.nextCharacterIndex];
+  if (!self.nextCharacterIndex) {
+    dispatch_after(0, dispatch_get_main_queue(), ^{
+      [self.guessingAreaDelegate guessingAreaViewDidHaveNoCharacters:self];
+    });
+  }
   return lastCharacter;
 }
 

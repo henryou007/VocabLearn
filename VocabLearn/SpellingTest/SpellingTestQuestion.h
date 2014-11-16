@@ -8,7 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class SpellingTestQuestion;
+
+@protocol SpellingTestQuestionDelegate <NSObject>
+
+- (void)questionDidGuessCorrectly:(SpellingTestQuestion *)question;
+
+@end
+
 @interface SpellingTestQuestion : NSObject
+
+@property (nonatomic, weak, readwrite) id<SpellingTestQuestionDelegate> delegate;
 
 @property (nonatomic, strong, readonly) NSArray *playableCharacters;
 @property (nonatomic, assign, readonly) NSUInteger wordLength;

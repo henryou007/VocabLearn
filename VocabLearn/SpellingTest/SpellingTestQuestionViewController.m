@@ -11,7 +11,7 @@
 #import "SpellingTestCharacterPickerView.h"
 #import "SpellingTestGuessingAreaView.h"
 
-@interface SpellingTestQuestionViewController () <SpellingTestCharacterPickerViewDelegate, SpellingTestGuessingAreaViewDelegate>
+@interface SpellingTestQuestionViewController () <SpellingTestCharacterPickerViewDelegate, SpellingTestGuessingAreaViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong, readonly) SpellingTestTestController *testController;
 @property (nonatomic, strong, readwrite) SpellingTestQuestion *question;
@@ -48,6 +48,8 @@
     self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self presentNextQuestion];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(onDoneButtonTap)];
   }
   return self;
 }
@@ -106,6 +108,7 @@
   _question = question;
 
   [self.guessingAreaView setCharacterLengthAndResetCharacters:self.question.wordLength];
+  self.deleteButton.enabled = NO;
   self.meaningLabel.text = self.question.meaning;
   [self.characterPickerView setCharactersAndClearSelectionState:self.question.playableCharacters];
 }
@@ -114,6 +117,7 @@
 
 - (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(unichar)character atIndex:(NSUInteger)index {
   [self.guessingAreaView addCharacter:character];
+  self.deleteButton.enabled = YES;
 }
 
 - (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(unichar)character atIndex:(NSUInteger)index {
@@ -136,7 +140,12 @@
   } else {
     [self.characterPickerView clearSelectionState];
     [self.guessingAreaView removeAllCharacters];
+    self.deleteButton.enabled = NO;
   }
+}
+
+- (void)guessingAreaViewDidHaveNoCharacters:(SpellingTestGuessingAreaView *)guessingAreaView {
+  self.deleteButton.enabled = NO;
 }
 
 #pragma mark - Delete Button
@@ -144,6 +153,18 @@
 - (void)onDeleteButtonTap {
   unichar lastCharacter = [self.guessingAreaView removeLastCharacter];
   [self.characterPickerView deselectCharacter:lastCharacter];
+}
+
+#pragma mark - Done Button
+
+- (void)onDoneButtonTap {
+  NSUInteger correctCount = self.testController.correctCount;
+  NSString *message = [NSString stringWithFormat:@"You got %lu question%@ right.", (unsigned long)correctCount, correctCount == 1 ? @"" : @"s"];
+  [[[UIAlertView alloc] initWithTitle:@"Result" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

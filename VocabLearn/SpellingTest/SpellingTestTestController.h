@@ -13,6 +13,8 @@
 
 @interface SpellingTestTestController : NSObject
 
+@property (nonatomic, assign, readonly) NSUInteger correctCount;
+
 - (instancetype)initWithVocabList:(VocabList *)vocabList;
 
 - (SpellingTestQuestion *)nextQuestion;

@@ -38,6 +38,7 @@ static const NSUInteger kExtraPlayableCharacters = 5;
       return NO;
     }
   }
+  [self.delegate questionDidGuessCorrectly:self];
   return YES;
 }
 
