@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestMenuViewController">
             <connections>
+                <outlet property="backButton" destination="iay-Uc-Svh" id="n4U-u0-nb2"/>
                 <outlet property="multipleChoiceButton" destination="XJE-YD-PMJ" id="StM-1G-iaL"/>
                 <outlet property="spellingTestButton" destination="dHL-wr-BSk" id="qpv-Sr-ak2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

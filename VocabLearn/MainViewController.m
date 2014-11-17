@@ -16,9 +16,10 @@
 #import "SpellingTestWelcomeViewController.h"
 #import "TestMenuViewController.h"
 
-@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate>
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate, UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *vocabListTableView;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (assign, nonatomic) BOOL isPresenting;
 
 @end
 
@@ -40,9 +41,6 @@
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                     [UIColor whiteColor], NSForegroundColorAttributeName,
                                                                     [UIFont fontWithName:@"System" size:30.0], NSFontAttributeName, nil]];
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Spelling Test" style:UIBarButtonItemStylePlain target:self action:@selector(onSpellingTestButtonTap)];
-//    
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Multiple Test" style:UIBarButtonItemStylePlain target:self action:@selector(onMultipleTestButtonTap)];
     
     [self.vocabListTableView registerNib:[UINib nibWithNibName:@"VocabListCell" bundle:nil] forCellReuseIdentifier:@"VocabListCell"];
     
@@ -90,9 +88,13 @@
     [self.navigationController pushViewController:[[VocabListBrowseViewController alloc] init] animated:YES];
 }
 
+
+
 - (IBAction)onTestButtonTap:(id)sender {
     TestMenuViewController *testMenuViewController = [[TestMenuViewController alloc] init];
     testMenuViewController.delegate = self;
+    testMenuViewController.modalPresentationStyle = UIModalPresentationCustom;
+    testMenuViewController.transitioningDelegate = self;
     
     [self presentViewController:testMenuViewController animated:YES completion:nil];
 }
@@ -104,8 +106,59 @@
     } else if ([testChoice isEqualToString:@"multiple_choice"]) {
         [self.navigationController pushViewController:[[MultipleChoiceViewController alloc] init] animated:YES];
     }
-    
 }
+
+- (id )animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.isPresenting = YES;
+    return self;
+}
+
+- (id )animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.isPresenting = NO;
+    return self;
+}
+
+- (NSTimeInterval)transitionDuration:(id )transitionContext {
+    return 0.4;
+}
+
+- (void)animateTransition:(id) transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    if (self.isPresenting) {
+        self.testButton.hidden = YES;
+        
+        // Needs to find the frame in its superview
+        CGRect frame = [self.testButton convertRect:self.testButton.frame toView:self.navigationController.view];
+        UIImageView *movingImageView = [[UIImageView alloc] initWithFrame:frame];
+        
+        [movingImageView setImage:[UIImage imageNamed:@"main_page_background"]];
+        movingImageView.clipsToBounds = YES;
+        movingImageView.alpha = 0;
+        
+        [[[UIApplication sharedApplication] keyWindow] addSubview:movingImageView];
+        
+        [UIView animateWithDuration:0.6 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            movingImageView.frame = toViewController.view.frame;
+            movingImageView.alpha = 1;
+        } completion:^(BOOL finished) {
+            [containerView addSubview:toViewController.view];
+            [movingImageView removeFromSuperview];
+            [transitionContext completeTransition:YES];
+            self.testButton.hidden = NO;
+        }];
+    } else {
+        [UIView animateWithDuration:0.4 animations:^{
+            fromViewController.view.alpha = 0;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+            [fromViewController.view removeFromSuperview];
+        }];
+    }
+}
+
 
 - (IBAction)onCreateListButtonClick:(id)sender {
     [self.navigationController pushViewController:[[VocabListCreationViewController alloc] init] animated:YES];

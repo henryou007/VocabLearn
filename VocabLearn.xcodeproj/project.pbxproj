@@ -209,9 +209,6 @@
 				A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */,
 				A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */,
 				A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */,
-				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
-				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
-				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -258,13 +255,16 @@
 		EA260A551A17C0CD0049D28F /* Spelling Test */ = {
 			isa = PBXGroup;
 			children = (
-				EA78D3421A17D542002F9405 /* Question View */,
+				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
+				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
+				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
 				EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */,
 				EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */,
 				EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */,
 				EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */,
 				EA78D33F1A17D315002F9405 /* SpellingTestQuestion.h */,
 				EA78D3401A17D315002F9405 /* SpellingTestQuestion.m */,
+				EA78D3421A17D542002F9405 /* Question View */,
 			);
 			name = "Spelling Test";
 			sourceTree = "<group>";
