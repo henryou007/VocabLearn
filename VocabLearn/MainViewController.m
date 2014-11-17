@@ -7,16 +7,18 @@
 //
 
 #import "MainViewController.h"
-#import "SpellingTestWelcomeViewController.h"
 #import "VocabListCell.h"
 #import "VocabListCreationViewController.h"
 #import "VocabList.h"
 #import "VocabListStore.h"
 #import "VocabListBrowseViewController.h"
 #import "MultipleChoiceViewController.h"
+#import "SpellingTestWelcomeViewController.h"
+#import "TestMenuViewController.h"
 
-@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *vocabListTableView;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
 
 @end
 
@@ -25,15 +27,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.testButton setBackgroundImage:[UIImage imageNamed:@"main_page_background"] forState:UIControlStateNormal];
+    [self.testButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
     self.vocabListTableView.dataSource = self;
     self.vocabListTableView.delegate = self;
     self.vocabListTableView.rowHeight = UITableViewAutomaticDimension;
-    self.title = @"VoacbLearn";
+    self.title = @"VocabLearn";
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Spelling Test" style:UIBarButtonItemStylePlain target:self action:@selector(onSpellingTestButtonTap)];
-  
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Multiple Test" style:UIBarButtonItemStylePlain target:self action:@selector(onMultipleTestButtonTap)];
-
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                    [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                                    [UIFont fontWithName:@"System" size:30.0], NSFontAttributeName, nil]];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Spelling Test" style:UIBarButtonItemStylePlain target:self action:@selector(onSpellingTestButtonTap)];
+//    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Multiple Test" style:UIBarButtonItemStylePlain target:self action:@selector(onMultipleTestButtonTap)];
+    
     [self.vocabListTableView registerNib:[UINib nibWithNibName:@"VocabListCell" bundle:nil] forCellReuseIdentifier:@"VocabListCell"];
     
     [self.vocabListTableView reloadData];
@@ -49,8 +59,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"%lu", (unsigned long)[[[VocabListStore sharedInstance] allVocabLists] count]);
-    
     return [[[VocabListStore sharedInstance] allVocabLists] count];
 }
 
@@ -69,7 +77,7 @@
     [rightUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
                                                 title:@"Delete"];
-
+    
     cell.rightUtilityButtons = rightUtilityButtons;
     cell.delegate = self;
     
@@ -82,16 +90,25 @@
     [self.navigationController pushViewController:[[VocabListBrowseViewController alloc] init] animated:YES];
 }
 
+- (IBAction)onTestButtonTap:(id)sender {
+    TestMenuViewController *testMenuViewController = [[TestMenuViewController alloc] init];
+    testMenuViewController.delegate = self;
+    
+    [self presentViewController:testMenuViewController animated:YES completion:nil];
+}
+
+- (void)testMenuViewController:(TestMenuViewController *)testMenuViewController didSelectTest:(NSString *) testChoice {
+    if ([testChoice isEqualToString:@"spelling_test"]) {
+        
+        [self.navigationController pushViewController:[[SpellingTestWelcomeViewController alloc] init] animated:YES];
+    } else if ([testChoice isEqualToString:@"multiple_choice"]) {
+        [self.navigationController pushViewController:[[MultipleChoiceViewController alloc] init] animated:YES];
+    }
+    
+}
+
 - (IBAction)onCreateListButtonClick:(id)sender {
     [self.navigationController pushViewController:[[VocabListCreationViewController alloc] init] animated:YES];
-}
-
-- (void)onSpellingTestButtonTap {
-  [self.navigationController pushViewController:[[SpellingTestWelcomeViewController alloc] init] animated:YES];
-}
-
-- (void)onMultipleTestButtonTap {
-  [self.navigationController pushViewController:[[MultipleChoiceViewController alloc] init] animated:YES];
 }
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
@@ -116,13 +133,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

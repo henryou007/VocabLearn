@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E91EAF6F7F0F457434DFA3F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9C046BD1995DDD68F5EABB /* libPods.a */; };
+		A9168D3B1A199D1A00D27333 /* TestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9168D391A199D1A00D27333 /* TestMenuViewController.m */; };
+		A9168D3C1A199D1A00D27333 /* TestMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */; };
 		A92FCCB71A196DF100B16E9B /* SpellingTestCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = A92FCCB61A196DF100B16E9B /* SpellingTestCharacter.m */; };
 		A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B271A1703FC003EB8FE /* VocabListStore.m */; };
 		A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */; };
@@ -49,6 +51,9 @@
 /* Begin PBXFileReference section */
 		3899FDDC32E6CFF69BCBC008 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4E9C046BD1995DDD68F5EABB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9168D381A199D1A00D27333 /* TestMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMenuViewController.h; sourceTree = "<group>"; };
+		A9168D391A199D1A00D27333 /* TestMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMenuViewController.m; sourceTree = "<group>"; };
+		A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestMenuViewController.xib; sourceTree = "<group>"; };
 		A92FCCB51A196DF100B16E9B /* SpellingTestCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacter.h; path = SpellingTest/SpellingTestCharacter.h; sourceTree = "<group>"; };
 		A92FCCB61A196DF100B16E9B /* SpellingTestCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacter.m; path = SpellingTest/SpellingTestCharacter.m; sourceTree = "<group>"; };
 		A9632B261A1703FC003EB8FE /* VocabListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListStore.h; sourceTree = "<group>"; };
@@ -151,10 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				EA260A551A17C0CD0049D28F /* Spelling Test */,
+				A9F3019E1A1991BA006AFD1A /* TableViewCells */,
 				C7424F9F1A1979CA00BF2D65 /* MultipleChoice */,
-				A9EF20191A15CBF40017089D /* VocabListCell.h */,
-				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
-				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
 				A9EF20181A15C9B70017089D /* Entities */,
 				A9EF20171A15C9A60017089D /* ViewControllers */,
 				A9EF1FED1A15C5800017089D /* AppDelegate.h */,
@@ -206,6 +209,9 @@
 				A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */,
 				A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */,
 				A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */,
+				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
+				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
+				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +225,16 @@
 				A9632B271A1703FC003EB8FE /* VocabListStore.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		A9F3019E1A1991BA006AFD1A /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF20191A15CBF40017089D /* VocabListCell.h */,
+				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
+				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		C0142DE3DB168625C384B821 /* Frameworks */ = {
@@ -359,6 +375,7 @@
 				A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */,
 				A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */,
 				A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */,
+				A9168D3C1A199D1A00D27333 /* TestMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +429,7 @@
 				EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */,
 				EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */,
 				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
+				A9168D3B1A199D1A00D27333 /* TestMenuViewController.m in Sources */,
 				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
 				C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */,

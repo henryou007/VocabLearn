@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="testButton" destination="5sg-AP-ZHk" id="1uf-Lx-87c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vocabListTableView" destination="BH4-w5-nkx" id="bRh-Nr-LxH"/>
             </connections>
@@ -28,18 +29,34 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-w5-nkx">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="532"/>
+                    <rect key="frame" x="0.0" y="170" width="320" height="362"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sg-AP-ZHk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="Cei-Bj-XL3"/>
+                    </constraints>
+                    <state key="normal" title="Test Your Knowledge!">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTestButtonTap:" destination="-1" eventType="touchUpInside" id="aCy-Kz-rEA"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="5sg-AP-ZHk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3rm-IW-2D4"/>
                 <constraint firstAttribute="bottom" secondItem="gsW-4v-WI3" secondAttribute="bottom" constant="-2" id="8Zp-6e-71y"/>
                 <constraint firstAttribute="trailing" secondItem="gsW-4v-WI3" secondAttribute="trailing" id="EqI-yd-QYF"/>
-                <constraint firstItem="BH4-w5-nkx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GNO-0m-pkF"/>
                 <constraint firstItem="BH4-w5-nkx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LIc-Al-pcu"/>
+                <constraint firstItem="BH4-w5-nkx" firstAttribute="top" secondItem="5sg-AP-ZHk" secondAttribute="bottom" constant="8" id="SXH-AZ-noU"/>
                 <constraint firstItem="gsW-4v-WI3" firstAttribute="top" secondItem="BH4-w5-nkx" secondAttribute="bottom" constant="-9" id="WOR-Jn-Mud"/>
                 <constraint firstAttribute="trailing" secondItem="BH4-w5-nkx" secondAttribute="trailing" id="f3p-0b-24a"/>
+                <constraint firstItem="5sg-AP-ZHk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hs6-IN-P0z"/>
+                <constraint firstAttribute="trailing" secondItem="5sg-AP-ZHk" secondAttribute="trailing" id="ncY-NY-VZU"/>
                 <constraint firstItem="gsW-4v-WI3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yXh-sq-Yjo"/>
             </constraints>
             <point key="canvasLocation" x="139" y="155"/>
