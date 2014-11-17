@@ -26,6 +26,7 @@
 		A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF201B1A15CBF40017089D /* VocabListCell.xib */; };
 		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
 		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
+		C70176D71A19C1A4003FC85F /* MultipleChoiceQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C70176D61A19C1A4003FC85F /* MultipleChoiceQuestion.m */; };
 		C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */; };
 		C7424FA41A197A0300BF2D65 /* MultipleChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */; };
 		EA169EA71A19A445006226BD /* UIColor+VocabLean.m in Sources */ = {isa = PBXBuildFile; fileRef = EA169EA61A19A445006226BD /* UIColor+VocabLean.m */; };
@@ -82,6 +83,8 @@
 		A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCreationViewController.h; sourceTree = "<group>"; };
 		A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCreationViewController.m; sourceTree = "<group>"; };
 		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
+		C70176D51A19C1A4003FC85F /* MultipleChoiceQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceQuestion.h; sourceTree = "<group>"; };
+		C70176D61A19C1A4003FC85F /* MultipleChoiceQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceQuestion.m; sourceTree = "<group>"; };
 		C7424FA01A197A0300BF2D65 /* MultipleChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceViewController.h; sourceTree = "<group>"; };
 		C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceViewController.m; sourceTree = "<group>"; };
 		C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleChoiceViewController.xib; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				C7424FA01A197A0300BF2D65 /* MultipleChoiceViewController.h */,
 				C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */,
 				C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */,
+				C70176D51A19C1A4003FC85F /* MultipleChoiceQuestion.h */,
+				C70176D61A19C1A4003FC85F /* MultipleChoiceQuestion.m */,
 			);
 			name = MultipleChoice;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				A9168D3B1A199D1A00D27333 /* TestMenuViewController.m in Sources */,
 				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
+				C70176D71A19C1A4003FC85F /* MultipleChoiceQuestion.m in Sources */,
 				C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */,
 				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
 				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,

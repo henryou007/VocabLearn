@@ -9,7 +9,9 @@
                 <outlet property="answerOneBtn" destination="s5a-bO-znV" id="w1x-GZ-X6G"/>
                 <outlet property="answerThreeBtn" destination="toO-ch-Kew" id="DMc-Kv-oGd"/>
                 <outlet property="answerTwoBtn" destination="FXi-fH-e7g" id="lNd-bm-eg0"/>
+                <outlet property="questionLabel" destination="YNk-np-oLX" id="wMy-5q-gVk"/>
                 <outlet property="testView" destination="Bnk-FK-qbg" id="kuu-AL-7C4"/>
+                <outlet property="titleLabel" destination="3R3-WM-Oep" id="2PU-pw-xj3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,23 +23,17 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-FK-qbg">
                     <rect key="frame" x="30" y="143" width="261" height="306"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-WM-Oep">
-                            <rect key="frame" x="74" y="12" width="114" height="23"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-iu-Sqv">
                             <color key="backgroundColor" red="0.056335054926558673" green="0.55462771045918369" blue="0.12304723356743739" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the meaning of " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zh-qt-JD5">
-                            <rect key="frame" x="33" y="50" width="196" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the meaning of " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zh-qt-JD5">
+                            <rect key="frame" x="8" y="50" width="245" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'stone'" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNk-np-oLX">
-                            <rect key="frame" x="96" y="76" width="60" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'stone'" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNk-np-oLX">
+                            <rect key="frame" x="16" y="76" width="237" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                             <nil key="highlightedColor"/>
@@ -75,6 +71,12 @@
                                 <action selector="threeClick:" destination="-1" eventType="touchUpInside" id="fNW-BJ-omq"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-WM-Oep">
+                            <rect key="frame" x="16" y="13" width="220" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.34062619286532647" green="0.35232970265795815" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

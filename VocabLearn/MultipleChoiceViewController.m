@@ -9,6 +9,8 @@
 #import "MultipleChoiceViewController.h"
 #import "UIColor+VocabLean.h"
 #import "VocabList.h"
+#import "MultipleChoiceQuestion.h"
+#import "AppDelegate.h"
 
 static const CGFloat kBarWidth = 50;
 static const CGFloat kBarHeight = 30;
@@ -17,14 +19,11 @@ static const CGFloat kBarTopPadding = 20;;
 
 static const int kElementsPerLine = 5;
 
-
-
 @interface MultipleChoiceViewController ()
 @property (weak, nonatomic) IBOutlet UIView *testView;
 @property (weak, nonatomic) IBOutlet UIButton *answerOneBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeBtn;
-@property (strong, nonatomic) VocabList *vocabularyList;
 
 @end
 
@@ -32,24 +31,47 @@ static const int kElementsPerLine = 5;
 {
   // x postion of the progress bar
   int questionsAnswered;
+  __weak IBOutlet UILabel *questionLabel;
+  __weak IBOutlet UILabel *titleLabel;
+  MultipleChoiceQuestion *_multipleChoiceQuestion;
+  
 }
 
 - (id)initWithVocabList:(VocabList *)vocabularyList {
   if (self = [super init]) {
-    _vocabularyList = vocabularyList;
+    _multipleChoiceQuestion = [[MultipleChoiceQuestion alloc] initWithVocabList:vocabularyList];
   }
   return self;
+}
+
+- (NSUInteger)_getMaxNumberOfQuestions
+{
+  return [_multipleChoiceQuestion getNumberOfQuestions];
+}
+
+- (void)_updateRound
+{
+  [_multipleChoiceQuestion calculateNextRound];
+  if (questionsAnswered < [self _getMaxNumberOfQuestions]) {
+    titleLabel.text = [NSString stringWithFormat:@"Question %d of %ld:", questionsAnswered+1, [self _getMaxNumberOfQuestions]];
+    questionLabel.text = [NSString stringWithFormat:@"'%@'", [_multipleChoiceQuestion getQuestion]];
+  } else {
+    [[[UIAlertView alloc] initWithTitle:@"Your Result:" message:@"TODO" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+  [appDelegate showMainRootController];
+  }
 }
 
 
 
 - (CGFloat)_getXPos
 {
-  return  kBarLeftPadding + kBarWidth * (questionsAnswered % kElementsPerLine);
+  return  kBarLeftPadding + kBarWidth * ((questionsAnswered-1) % kElementsPerLine);
 }
 - (CGFloat)_getYPos
 {
-  return  kBarTopPadding + kBarHeight * (questionsAnswered/kElementsPerLine);
+  return  kBarTopPadding + kBarHeight * ((questionsAnswered-1)/kElementsPerLine);
 }
 
 
@@ -64,6 +86,7 @@ static const int kElementsPerLine = 5;
 - (void)viewDidLoad {
     [super viewDidLoad];
     questionsAnswered = 0;
+  [self _updateRound];
   [self _styleButton:_answerOneBtn];
   [self _styleButton:_answerTwoBtn];
   [self _styleButton:_answerThreeBtn];
@@ -120,6 +143,10 @@ static const int kElementsPerLine = 5;
       helpFrame.origin.x += self.view.frame.size.width;
       _testView.frame = helpFrame;
       
+      questionsAnswered += 1;
+      [self _updateRound];
+    
+      
       [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         CGRect helpFrame = _testView.frame;
         helpFrame.origin.x -= self.view.frame.size.width;
@@ -131,7 +158,6 @@ static const int kElementsPerLine = 5;
         CGRect frame = myView.frame;
         frame.origin.x = [self _getXPos];
         frame.origin.y = [self _getYPos];
-          questionsAnswered += 1;
         myView.frame = frame;
       } completion:^(BOOL finished) {
         

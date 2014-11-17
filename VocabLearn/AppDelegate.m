@@ -21,21 +21,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    UINavigationBar *navigationBar = [UINavigationBar appearance];
-    navigationBar.barTintColor = [UIColor navigationBarColor];
-    navigationBar.tintColor = [UIColor textColor];
-    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor navigationBarTitleColor]};
+  [self showMainRootController];
+  return YES;
+}
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
-    
-    self.window.rootViewController = navi;
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    [self.window makeKeyAndVisible];
-    
-    return YES;
+- (void)showMainRootController
+{
+  UINavigationBar *navigationBar = [UINavigationBar appearance];
+  navigationBar.barTintColor = [UIColor navigationBarColor];
+  navigationBar.tintColor = [UIColor textColor];
+  navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor navigationBarTitleColor]};
+  
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+  
+  self.window.rootViewController = navi;
+  
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+  
+  [self.window makeKeyAndVisible];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
