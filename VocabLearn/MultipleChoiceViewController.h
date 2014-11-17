@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class VocabList;
+
 @interface MultipleChoiceViewController : UIViewController
+
+- (id)initWithVocabList:(VocabList *)vocabList;
 
 @end

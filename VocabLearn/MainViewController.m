@@ -100,11 +100,13 @@
 }
 
 - (void)testMenuViewController:(TestMenuViewController *)testMenuViewController didSelectTest:(NSString *) testChoice {
+  SpellingTestWelcomeViewController *selectorController = [[SpellingTestWelcomeViewController alloc] init];
+  
     if ([testChoice isEqualToString:@"spelling_test"]) {
-        
-        [self.navigationController pushViewController:[[SpellingTestWelcomeViewController alloc] init] animated:YES];
+        [self.navigationController pushViewController:selectorController animated:YES];
     } else if ([testChoice isEqualToString:@"multiple_choice"]) {
-        [self.navigationController pushViewController:[[MultipleChoiceViewController alloc] init] animated:YES];
+        selectorController.useMultipleChoice = YES;
+        [self.navigationController pushViewController:selectorController animated:YES];
     }
 }
 

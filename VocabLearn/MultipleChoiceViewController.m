@@ -8,6 +8,7 @@
 
 #import "MultipleChoiceViewController.h"
 #import "UIColor+VocabLean.h"
+#import "VocabList.h"
 
 static const CGFloat kBarWidth = 50;
 static const CGFloat kBarHeight = 30;
@@ -23,6 +24,7 @@ static const int kElementsPerLine = 5;
 @property (weak, nonatomic) IBOutlet UIButton *answerOneBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeBtn;
+@property (strong, nonatomic) VocabList *vocabularyList;
 
 @end
 
@@ -31,6 +33,15 @@ static const int kElementsPerLine = 5;
   // x postion of the progress bar
   int questionsAnswered;
 }
+
+- (id)initWithVocabList:(VocabList *)vocabularyList {
+  if (self = [super init]) {
+    _vocabularyList = vocabularyList;
+  }
+  return self;
+}
+
+
 
 - (CGFloat)_getXPos
 {
@@ -41,6 +52,7 @@ static const int kElementsPerLine = 5;
   return  kBarTopPadding + kBarHeight * (questionsAnswered/kElementsPerLine);
 }
 
+
 - (void)_styleButton:(UIButton *)btn
 {
   btn.layer.cornerRadius = 10;
@@ -48,7 +60,6 @@ static const int kElementsPerLine = 5;
   btn.layer.borderColor=[[UIColor whiteColor] CGColor];
   btn.clipsToBounds = YES;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

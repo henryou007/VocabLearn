@@ -11,5 +11,6 @@
 @interface SpellingTestWelcomeViewController : UITableViewController
 
 - (instancetype)init;
+@property (nonatomic, assign) BOOL useMultipleChoice;
 
 @end

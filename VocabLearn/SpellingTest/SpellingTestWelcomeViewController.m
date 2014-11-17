@@ -12,6 +12,7 @@
 #import "SpellingTestTestController.h"
 #import "UIColor+VocabLean.h"
 #import "VocabListStore.h"
+#import "MultipleChoiceViewController.h"
 
 @interface SpellingTestWelcomeViewController ()
 
@@ -30,6 +31,13 @@
     _vocabListStore = [VocabListStore sharedInstance];
   }
   return self;
+}
+
+- (void)setUseMultipleChoice:(BOOL)useMultipleChoice
+{
+  if (_useMultipleChoice) {
+    self.title = @"Multiple Choice";
+  }
 }
 
 #pragma mark - UITableViewDataSource
@@ -59,8 +67,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     return;
   }
+  
+  if (_useMultipleChoice) {
+    MultipleChoiceViewController *questionVC = [[MultipleChoiceViewController alloc] initWithVocabList:vocabList];
+    [self.navigationController pushViewController:questionVC animated:YES];
+  } else {
   SpellingTestQuestionViewController *questionVC = [[SpellingTestQuestionViewController alloc] initWithTestController:[[SpellingTestTestController alloc] initWithVocabList:vocabList]];
   [self.navigationController pushViewController:questionVC animated:YES];
+  }
 }
 
 @end
