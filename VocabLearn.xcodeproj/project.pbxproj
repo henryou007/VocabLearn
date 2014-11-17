@@ -24,6 +24,11 @@
 		A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF201B1A15CBF40017089D /* VocabListCell.xib */; };
 		A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */; };
 		A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */; };
+		C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */; };
+		C7424FA41A197A0300BF2D65 /* MultipleChoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */; };
+		C7424FA61A197B1200BF2D65 /* trashcan.png in Resources */ = {isa = PBXBuildFile; fileRef = C7424FA51A197B1200BF2D65 /* trashcan.png */; };
+		C7424FA81A197D6700BF2D65 /* Smiley.svg in Resources */ = {isa = PBXBuildFile; fileRef = C7424FA71A197D6700BF2D65 /* Smiley.svg */; };
+		C7424FAA1A197D8600BF2D65 /* like_png.png in Resources */ = {isa = PBXBuildFile; fileRef = C7424FA91A197D8600BF2D65 /* like_png.png */; };
 		EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */; };
 		EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33A1A17CDE7002F9405 /* SpellingTestTestController.m */; };
 		EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */; };
@@ -74,6 +79,12 @@
 		A9EF201E1A15CE390017089D /* VocabListCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListCreationViewController.h; sourceTree = "<group>"; };
 		A9EF201F1A15CE390017089D /* VocabListCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListCreationViewController.m; sourceTree = "<group>"; };
 		A9EF20201A15CE390017089D /* VocabListCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VocabListCreationViewController.xib; sourceTree = "<group>"; };
+		C7424FA01A197A0300BF2D65 /* MultipleChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceViewController.h; sourceTree = "<group>"; };
+		C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceViewController.m; sourceTree = "<group>"; };
+		C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleChoiceViewController.xib; sourceTree = "<group>"; };
+		C7424FA51A197B1200BF2D65 /* trashcan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trashcan.png; path = ../../Desktop/trashcan.png; sourceTree = "<group>"; };
+		C7424FA71A197D6700BF2D65 /* Smiley.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Smiley.svg; path = ../../Desktop/Smiley.svg; sourceTree = "<group>"; };
+		C7424FA91A197D8600BF2D65 /* like_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = like_png.png; path = ../../Desktop/like_png.png; sourceTree = "<group>"; };
 		EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestWelcomeViewController.h; path = SpellingTest/SpellingTestWelcomeViewController.h; sourceTree = "<group>"; };
 		EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestWelcomeViewController.m; path = SpellingTest/SpellingTestWelcomeViewController.m; sourceTree = "<group>"; };
 		EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestTestController.h; path = SpellingTest/SpellingTestTestController.h; sourceTree = "<group>"; };
@@ -142,6 +153,7 @@
 		A9EF1FE81A15C5800017089D /* VocabLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C7424F9F1A1979CA00BF2D65 /* MultipleChoice */,
 				A9EF20191A15CBF40017089D /* VocabListCell.h */,
 				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
 				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
@@ -216,6 +228,19 @@
 				4E9C046BD1995DDD68F5EABB /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7424F9F1A1979CA00BF2D65 /* MultipleChoice */ = {
+			isa = PBXGroup;
+			children = (
+				C7424FA91A197D8600BF2D65 /* like_png.png */,
+				C7424FA71A197D6700BF2D65 /* Smiley.svg */,
+				C7424FA51A197B1200BF2D65 /* trashcan.png */,
+				C7424FA01A197A0300BF2D65 /* MultipleChoiceViewController.h */,
+				C7424FA11A197A0300BF2D65 /* MultipleChoiceViewController.m */,
+				C7424FA21A197A0300BF2D65 /* MultipleChoiceViewController.xib */,
+			);
+			name = MultipleChoice;
 			sourceTree = "<group>";
 		};
 		EA260A551A17C0CD0049D28F /* Spelling Test */ = {
@@ -331,8 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7424FAA1A197D8600BF2D65 /* like_png.png in Resources */,
 				A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */,
+				C7424FA41A197A0300BF2D65 /* MultipleChoiceViewController.xib in Resources */,
 				A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */,
+				C7424FA61A197B1200BF2D65 /* trashcan.png in Resources */,
+				C7424FA81A197D6700BF2D65 /* Smiley.svg in Resources */,
 				A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */,
 				A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */,
 				A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */,
@@ -392,6 +421,7 @@
 				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
 				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
+				C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */,
 				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
 				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,
 				A9EF20161A15C9970017089D /* VocabList.m in Sources */,
@@ -518,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VocabLearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -529,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VocabLearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

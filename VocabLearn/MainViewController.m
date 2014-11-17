@@ -13,6 +13,7 @@
 #import "VocabList.h"
 #import "VocabListStore.h"
 #import "VocabListBrowseViewController.h"
+#import "MultipleChoiceViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *vocabListTableView;
@@ -30,6 +31,8 @@
     self.title = @"VoacbLearn";
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Spelling Test" style:UIBarButtonItemStylePlain target:self action:@selector(onSpellingTestButtonTap)];
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Multiple Test" style:UIBarButtonItemStylePlain target:self action:@selector(onMultipleTestButtonTap)];
 
     [self.vocabListTableView registerNib:[UINib nibWithNibName:@"VocabListCell" bundle:nil] forCellReuseIdentifier:@"VocabListCell"];
     
@@ -85,6 +88,10 @@
 
 - (void)onSpellingTestButtonTap {
   [self.navigationController pushViewController:[[SpellingTestWelcomeViewController alloc] init] animated:YES];
+}
+
+- (void)onMultipleTestButtonTap {
+  [self.navigationController pushViewController:[[MultipleChoiceViewController alloc] init] animated:YES];
 }
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
