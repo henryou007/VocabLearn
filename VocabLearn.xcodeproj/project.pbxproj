@@ -33,6 +33,7 @@
 		EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */; };
 		EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */; };
 		EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */; };
+		EAE2EBC51A1993310078134F /* ColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE2EBC41A1993310078134F /* ColorManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterPickerView.m; path = SpellingTest/SpellingTestCharacterPickerView.m; sourceTree = "<group>"; };
 		EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestGuessingAreaView.h; path = SpellingTest/SpellingTestGuessingAreaView.h; sourceTree = "<group>"; };
 		EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestGuessingAreaView.m; path = SpellingTest/SpellingTestGuessingAreaView.m; sourceTree = "<group>"; };
+		EAE2EBC31A1993310078134F /* ColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
+		EAE2EBC41A1993310078134F /* ColorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorManager.m; sourceTree = "<group>"; };
 		F5DF1409AA78B25E9457D551 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +161,8 @@
 				A9EF1FF61A15C5800017089D /* Images.xcassets */,
 				A9EF1FF81A15C5800017089D /* LaunchScreen.xib */,
 				A9EF1FE91A15C5800017089D /* Supporting Files */,
+				EAE2EBC31A1993310078134F /* ColorManager.h */,
+				EAE2EBC41A1993310078134F /* ColorManager.m */,
 			);
 			path = VocabLearn;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				EA78D33E1A17CED8002F9405 /* SpellingTestQuestionViewController.m in Sources */,
 				A9EF201C1A15CBF40017089D /* VocabListCell.m in Sources */,
 				EA260A581A17C1A00049D28F /* SpellingTestWelcomeViewController.m in Sources */,
+				EAE2EBC51A1993310078134F /* ColorManager.m in Sources */,
 				A9EF1FEC1A15C5800017089D /* main.m in Sources */,
 				A92FCCB71A196DF100B16E9B /* SpellingTestCharacter.m in Sources */,
 				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
