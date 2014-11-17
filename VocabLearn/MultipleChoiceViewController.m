@@ -7,15 +7,22 @@
 //
 
 #import "MultipleChoiceViewController.h"
+#import "UIColor+VocabLean.h"
 
 static const CGFloat kBarWidth = 50;
 static const CGFloat kBarHeight = 30;
-static const CGFloat kBarLeftPadding = 10;;
+static const CGFloat kBarLeftPadding = 30;;
 static const CGFloat kBarTopPadding = 20;;
+
+static const int kElementsPerLine = 5;
+
 
 
 @interface MultipleChoiceViewController ()
 @property (weak, nonatomic) IBOutlet UIView *testView;
+@property (weak, nonatomic) IBOutlet UIButton *answerOneBtn;
+@property (weak, nonatomic) IBOutlet UIButton *answerTwoBtn;
+@property (weak, nonatomic) IBOutlet UIButton *answerThreeBtn;
 
 @end
 
@@ -27,17 +34,28 @@ static const CGFloat kBarTopPadding = 20;;
 
 - (CGFloat)_getXPos
 {
-  return  kBarLeftPadding + kBarWidth * (questionsAnswered%6);
+  return  kBarLeftPadding + kBarWidth * (questionsAnswered % kElementsPerLine);
 }
 - (CGFloat)_getYPos
 {
-  return  kBarTopPadding + kBarHeight * (questionsAnswered/6);
+  return  kBarTopPadding + kBarHeight * (questionsAnswered/kElementsPerLine);
+}
+
+- (void)_styleButton:(UIButton *)btn
+{
+  btn.layer.cornerRadius = 10;
+  btn.layer.borderWidth=1.0f;
+  btn.layer.borderColor=[[UIColor whiteColor] CGColor];
+  btn.clipsToBounds = YES;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     questionsAnswered = 0;
+  [self _styleButton:_answerOneBtn];
+  [self _styleButton:_answerTwoBtn];
+  [self _styleButton:_answerThreeBtn];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -46,11 +64,20 @@ static const CGFloat kBarTopPadding = 20;;
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)correctClick:(id)sender {
-  [self animateResultWithColor:[UIColor greenColor]];
+    [self animateResultWithColor:[UIColor correctColor]];
   
 }
 - (IBAction)wrongClick:(id)sender {
-  [self animateResultWithColor:[UIColor redColor]];
+  [self animateResultWithColor:[UIColor wrongColor]];
+}
+- (IBAction)oneClick:(id)sender {
+  [self correctClick:sender];
+}
+- (IBAction)twoClick:(id)sender {
+  [self wrongClick:sender];
+}
+- (IBAction)threeClick:(id)sender {
+  [self wrongClick:sender];
 }
 
 - (void)animateResultWithColor:(UIColor *)color {
@@ -77,8 +104,15 @@ static const CGFloat kBarTopPadding = 20;;
       myView.bounds = frame;
     } completion:^(BOOL finished) {
       
+      // move the card from the right to the left
+      CGRect helpFrame = _testView.frame;
+      helpFrame.origin.x += self.view.frame.size.width;
+      _testView.frame = helpFrame;
       
       [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        CGRect helpFrame = _testView.frame;
+        helpFrame.origin.x -= self.view.frame.size.width;
+        _testView.frame = helpFrame;
         _testView.alpha = 1;
       } completion:nil];
       
