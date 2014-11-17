@@ -35,6 +35,7 @@
 
 - (void)setUseMultipleChoice:(BOOL)useMultipleChoice
 {
+  _useMultipleChoice = useMultipleChoice;
   if (_useMultipleChoice) {
     self.title = @"Multiple Choice";
   }
