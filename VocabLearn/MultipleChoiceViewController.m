@@ -27,11 +27,11 @@ static const CGFloat kBarTopPadding = 20;;
 
 - (CGFloat)_getXPos
 {
-  return  kBarLeftPadding + kBarWidth * (questionsAnswered%5);
+  return  kBarLeftPadding + kBarWidth * (questionsAnswered%6);
 }
 - (CGFloat)_getYPos
 {
-  return  kBarTopPadding + kBarHeight * (questionsAnswered/5);
+  return  kBarTopPadding + kBarHeight * (questionsAnswered/6);
 }
 
 
