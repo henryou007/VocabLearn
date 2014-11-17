@@ -8,6 +8,7 @@
 
 #import "SpellingTestCharacterPickerView.h"
 
+#import "ColorManager.h"
 #import "SpellingTestCharacterCell.h"
 
 @interface SpellingTestCharacterPickerView () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -18,7 +19,7 @@
 
 - (instancetype)init {
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]]) {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [ColorManager backgroundColor];
     self.dataSource = self;
     self.delegate = self;
     self.allowsSelection = YES;

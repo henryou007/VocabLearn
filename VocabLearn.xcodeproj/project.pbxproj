@@ -150,6 +150,7 @@
 		A9EF1FE81A15C5800017089D /* VocabLearn */ = {
 			isa = PBXGroup;
 			children = (
+				EA260A551A17C0CD0049D28F /* Spelling Test */,
 				C7424F9F1A1979CA00BF2D65 /* MultipleChoice */,
 				A9EF20191A15CBF40017089D /* VocabListCell.h */,
 				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
@@ -196,7 +197,6 @@
 		A9EF20171A15C9A60017089D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA260A551A17C0CD0049D28F /* Spelling Test */,
 				A9EF200F1A15C5A50017089D /* MainViewController.h */,
 				A9EF20101A15C5A50017089D /* MainViewController.m */,
 				A9EF20111A15C5A50017089D /* MainViewController.xib */,

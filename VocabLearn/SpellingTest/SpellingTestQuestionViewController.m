@@ -8,6 +8,7 @@
 
 #import "SpellingTestQuestionViewController.h"
 
+#import "ColorManager.h"
 #import "SpellingTestCharacter.h"
 #import "SpellingTestCharacterPickerView.h"
 #import "SpellingTestGuessingAreaView.h"
@@ -35,6 +36,7 @@
     self.guessingAreaView.translatesAutoresizingMaskIntoConstraints = NO;
 
     _meaningLabel = [[UILabel alloc] init];
+    self.meaningLabel.textColor = [ColorManager textColor];
     self.meaningLabel.numberOfLines = 0;
     self.meaningLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -44,7 +46,7 @@
 
     _deleteButton = [[UIButton alloc] init];
     [self.deleteButton setTitle:@"DEL<" forState:UIControlStateNormal];
-    [self.deleteButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.deleteButton setTitleColor:[ColorManager textColor] forState:UIControlStateNormal];
     [self.deleteButton addTarget:self action:@selector(onDeleteButtonTap) forControlEvents:UIControlEventTouchUpInside];
     self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -55,7 +57,7 @@
 
 - (void)loadView {
   [super loadView];
-  self.view.backgroundColor = [UIColor whiteColor];
+  self.view.backgroundColor = [ColorManager backgroundColor];
 
   [self.view addSubview:self.guessingAreaView];
   [self.view addSubview:self.meaningLabel];

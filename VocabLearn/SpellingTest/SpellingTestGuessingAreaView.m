@@ -8,6 +8,7 @@
 
 #import "SpellingTestGuessingAreaView.h"
 
+#import "ColorManager.h"
 #import "SpellingTestCharacterCell.h"
 
 @interface SpellingTestGuessingAreaView () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -21,7 +22,7 @@
 
 - (instancetype)init {
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[self.class createViewLayout]]) {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [ColorManager backgroundColor];
     self.dataSource = self;
     self.delegate = self;
     [self registerClass:SpellingTestCharacterCell.class forCellWithReuseIdentifier:@"Cell"];

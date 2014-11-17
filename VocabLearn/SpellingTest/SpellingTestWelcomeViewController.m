@@ -8,6 +8,7 @@
 
 #import "SpellingTestWelcomeViewController.h"
 
+#import "ColorManager.h"
 #import "SpellingTestQuestionViewController.h"
 #import "SpellingTestTestController.h"
 #import "VocabListStore.h"
@@ -23,10 +24,17 @@
 - (instancetype)init {
   if (self = [super initWithStyle:UITableViewStylePlain]) {
     self.title = @"Spelling Test";
+    self.view.backgroundColor = [ColorManager backgroundColor];
+    self.tableView.separatorColor = [ColorManager tableViewSeparatorColor];
 
     _vocabListStore = [VocabListStore sharedInstance];
   }
   return self;
+}
+
+- (void)loadView {
+  [super loadView];
+  self.navigationController.navigationBar.backgroundColor = [ColorManager navigationBarColor];
 }
 
 #pragma mark - UITableViewDataSource
@@ -39,14 +47,12 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
   if (!cell) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    cell.backgroundColor = [ColorManager backgroundColor];
+    cell.textLabel.textColor = [ColorManager textColor];
   }
   VocabList *vocabList = self.vocabListStore.allVocabLists[indexPath.row];
   cell.textLabel.text = vocabList.listName;
   return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-  return @"Select Vocab List to Start";
 }
 
 #pragma mark - UITableViewDelegate
