@@ -53,7 +53,13 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  SpellingTestQuestionViewController *questionVC = [[SpellingTestQuestionViewController alloc] initWithTestController:[[SpellingTestTestController alloc] initWithVocabList:self.vocabListStore.allVocabLists[indexPath.row]]];
+  VocabList *vocabList = self.vocabListStore.allVocabLists[indexPath.row];
+  if (!vocabList.vocabulary.count) {
+    [[[UIAlertView alloc] initWithTitle:@"Cannot test with this list" message:@"Please add some words to the list so we have something to test." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    return;
+  }
+  SpellingTestQuestionViewController *questionVC = [[SpellingTestQuestionViewController alloc] initWithTestController:[[SpellingTestTestController alloc] initWithVocabList:vocabList]];
   [self.navigationController pushViewController:questionVC animated:YES];
 }
 
