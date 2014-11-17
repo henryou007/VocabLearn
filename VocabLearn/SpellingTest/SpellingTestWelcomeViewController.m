@@ -32,11 +32,6 @@
   return self;
 }
 
-- (void)loadView {
-  [super loadView];
-  self.navigationController.navigationBar.backgroundColor = [ColorManager navigationBarColor];
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

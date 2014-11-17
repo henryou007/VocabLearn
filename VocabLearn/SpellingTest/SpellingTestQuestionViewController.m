@@ -161,6 +161,9 @@
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   NSUInteger correctCount = self.testController.correctCount;
+  if (correctCount == 0) {
+    return;
+  }
   NSString *message = [NSString stringWithFormat:@"You got %lu question%@ right.", (unsigned long)correctCount, correctCount == 1 ? @"" : @"s"];
   [[[UIAlertView alloc] initWithTitle:@"Result" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }

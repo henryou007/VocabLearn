@@ -15,6 +15,10 @@
 }
 
 + (UIColor *)navigationBarColor {
+  return [self darkRedColor];
+}
+
++ (UIColor *)navigationBarTitleColor {
   return [self orangeColor];
 }
 
@@ -53,7 +57,7 @@
 }
 
 + (UIColor *)orangeColor {
-  RETURN_STATIC_COLOR(0x4f, 0x87, 0x30, 1);
+  RETURN_STATIC_COLOR(0xf8, 0x5c, 0x05, 1);
 }
 
 + (UIColor *)yellowColor {
@@ -65,7 +69,7 @@
 }
 
 + (UIColor *)greenColor {
-  RETURN_STATIC_COLOR(0xf8, 0x5c, 0x05, 1);
+  RETURN_STATIC_COLOR(0x4f, 0x87, 0x30, 1);
 }
 
 @end

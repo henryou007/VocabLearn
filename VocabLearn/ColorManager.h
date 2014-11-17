@@ -12,8 +12,10 @@
 @interface ColorManager : NSObject
 
 + (UIColor *)backgroundColor;
-+ (UIColor *)navigationBarColor;
 + (UIColor *)textColor;
+
++ (UIColor *)navigationBarColor;
++ (UIColor *)navigationBarTitleColor;
 
 + (UIColor *)tableViewSeparatorColor;
 
