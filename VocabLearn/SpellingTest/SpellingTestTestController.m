@@ -13,6 +13,8 @@
 @interface SpellingTestTestController () <SpellingTestQuestionDelegate>
 
 @property (nonatomic, assign, readwrite) NSUInteger correctCount;
+@property (nonatomic, assign, readwrite) NSUInteger wrongCount;
+
 @property (nonatomic, strong, readonly) VocabList *vocabList;
 
 @end
@@ -39,8 +41,12 @@
 
 #pragma mark - SpellingTestQuestionDelegate
 
-- (void)questionDidGuessCorrectly:(SpellingTestQuestion *)question {
-  self.correctCount++;
+- (void)question:(SpellingTestQuestion *)question didGuessWithCorrect:(BOOL)correct {
+  if (correct) {
+    self.correctCount++;
+  } else {
+    self.wrongCount++;
+  }
 }
 
 @end

@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "ColorManager.h"
 #import "MainViewController.h"
+#import "UIColor+VocabLean.h"
 
 @interface AppDelegate ()
 
@@ -22,9 +22,9 @@
     // Override point for customization after application launch.
 
     UINavigationBar *navigationBar = [UINavigationBar appearance];
-    navigationBar.barTintColor = [ColorManager navigationBarColor];
-    navigationBar.tintColor = [ColorManager textColor];
-    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [ColorManager navigationBarTitleColor]};
+    navigationBar.barTintColor = [UIColor navigationBarColor];
+    navigationBar.tintColor = [UIColor textColor];
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor navigationBarTitleColor]};
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];

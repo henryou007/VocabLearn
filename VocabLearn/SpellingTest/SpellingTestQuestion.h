@@ -12,7 +12,7 @@
 
 @protocol SpellingTestQuestionDelegate <NSObject>
 
-- (void)questionDidGuessCorrectly:(SpellingTestQuestion *)question;
+- (void)question:(SpellingTestQuestion *)question didGuessWithCorrect:(BOOL)correct;
 
 @end
 

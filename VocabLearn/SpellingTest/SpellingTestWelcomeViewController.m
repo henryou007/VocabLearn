@@ -8,9 +8,9 @@
 
 #import "SpellingTestWelcomeViewController.h"
 
-#import "ColorManager.h"
 #import "SpellingTestQuestionViewController.h"
 #import "SpellingTestTestController.h"
+#import "UIColor+VocabLean.h"
 #import "VocabListStore.h"
 
 @interface SpellingTestWelcomeViewController ()
@@ -24,8 +24,8 @@
 - (instancetype)init {
   if (self = [super initWithStyle:UITableViewStylePlain]) {
     self.title = @"Spelling Test";
-    self.view.backgroundColor = [ColorManager backgroundColor];
-    self.tableView.separatorColor = [ColorManager tableViewSeparatorColor];
+    self.view.backgroundColor = [UIColor backgroundColor];
+    self.tableView.separatorColor = [UIColor tableViewSeparatorColor];
 
     _vocabListStore = [VocabListStore sharedInstance];
   }
@@ -42,8 +42,8 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
   if (!cell) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    cell.backgroundColor = [ColorManager backgroundColor];
-    cell.textLabel.textColor = [ColorManager textColor];
+    cell.backgroundColor = [UIColor backgroundColor];
+    cell.textLabel.textColor = [UIColor textColor];
   }
   VocabList *vocabList = self.vocabListStore.allVocabLists[indexPath.row];
   cell.textLabel.text = vocabList.listName;

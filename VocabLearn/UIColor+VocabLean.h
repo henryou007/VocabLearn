@@ -1,5 +1,5 @@
 //
-//  ColorManager.h
+//  UIColor+VocabLean.h
 //  VocabLearn
 //
 //  Created by Tienchai Wirojsaksaree on 11/16/14.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ColorManager : NSObject
+@interface UIColor (VocabLearn)
 
 + (UIColor *)backgroundColor;
 + (UIColor *)textColor;

@@ -8,10 +8,10 @@
 
 #import "SpellingTestQuestionViewController.h"
 
-#import "ColorManager.h"
 #import "SpellingTestCharacter.h"
 #import "SpellingTestCharacterPickerView.h"
 #import "SpellingTestGuessingAreaView.h"
+#import "UIColor+VocabLean.h"
 
 @interface SpellingTestQuestionViewController () <SpellingTestCharacterPickerViewDelegate, SpellingTestGuessingAreaViewDelegate, UIAlertViewDelegate>
 
@@ -36,7 +36,7 @@
     self.guessingAreaView.translatesAutoresizingMaskIntoConstraints = NO;
 
     _meaningLabel = [[UILabel alloc] init];
-    self.meaningLabel.textColor = [ColorManager textColor];
+    self.meaningLabel.textColor = [UIColor textColor];
     self.meaningLabel.numberOfLines = 0;
     self.meaningLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -46,7 +46,7 @@
 
     _deleteButton = [[UIButton alloc] init];
     [self.deleteButton setTitle:@"DEL<" forState:UIControlStateNormal];
-    [self.deleteButton setTitleColor:[ColorManager textColor] forState:UIControlStateNormal];
+    [self.deleteButton setTitleColor:[UIColor textColor] forState:UIControlStateNormal];
     [self.deleteButton addTarget:self action:@selector(onDeleteButtonTap) forControlEvents:UIControlEventTouchUpInside];
     self.deleteButton.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -57,7 +57,7 @@
 
 - (void)loadView {
   [super loadView];
-  self.view.backgroundColor = [ColorManager backgroundColor];
+  self.view.backgroundColor = [UIColor backgroundColor];
 
   [self.view addSubview:self.guessingAreaView];
   [self.view addSubview:self.meaningLabel];
@@ -136,13 +136,7 @@
   BOOL isCorrect = [self.question guessWithCharacters:characters];
   NSString *alertText = isCorrect ? @"Correct!" : @"Wrong!";
   [[[UIAlertView alloc] initWithTitle:nil message:alertText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-  if (isCorrect) {
-    [self presentNextQuestion];
-  } else {
-    [self.characterPickerView clearSelectionState];
-    [self.guessingAreaView removeAllCharacters];
-    self.deleteButton.enabled = NO;
-  }
+  [self presentNextQuestion];
 }
 
 - (void)guessingAreaViewDidHaveNoCharacters:(SpellingTestGuessingAreaView *)guessingAreaView {
@@ -161,11 +155,13 @@
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   NSUInteger correctCount = self.testController.correctCount;
-  if (correctCount == 0) {
+  NSUInteger wrongCount = self.testController.wrongCount;
+  NSUInteger totalCount = correctCount + wrongCount;
+  if (totalCount == 0) {
     return;
   }
-  NSString *message = [NSString stringWithFormat:@"You got %lu question%@ right.", (unsigned long)correctCount, correctCount == 1 ? @"" : @"s"];
-  [[[UIAlertView alloc] initWithTitle:@"Result" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+  NSString *message = [NSString stringWithFormat:@"%lu\tcorrect\n%lu\twrong", (unsigned long)correctCount, (unsigned long)wrongCount];
+  [[[UIAlertView alloc] initWithTitle:@"Your Result:" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {

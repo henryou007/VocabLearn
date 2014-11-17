@@ -14,6 +14,7 @@
 @interface SpellingTestTestController : NSObject
 
 @property (nonatomic, assign, readonly) NSUInteger correctCount;
+@property (nonatomic, assign, readonly) NSUInteger wrongCount;
 
 - (instancetype)initWithVocabList:(VocabList *)vocabList;
 

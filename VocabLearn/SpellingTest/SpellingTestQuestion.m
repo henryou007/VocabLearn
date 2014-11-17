@@ -32,6 +32,12 @@ static const NSUInteger kExtraPlayableCharacters = 5;
 }
 
 - (BOOL)guessWithCharacters:(NSArray *)guessingCharacters {
+  BOOL guessingResult = [self verifyGuessWithCharacters:guessingCharacters];
+  [self.delegate question:self didGuessWithCorrect:guessingResult];
+  return guessingResult;
+}
+
+- (BOOL)verifyGuessWithCharacters:(NSArray *)guessingCharacters {
   if (guessingCharacters.count != self.word.length) {
     return NO;
   }
@@ -40,7 +46,6 @@ static const NSUInteger kExtraPlayableCharacters = 5;
       return NO;
     }
   }
-  [self.delegate questionDidGuessCorrectly:self];
   return YES;
 }
 

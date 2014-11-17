@@ -8,7 +8,7 @@
 
 #import "SpellingTestCharacterCell.h"
 
-#import "ColorManager.h"
+#import "UIColor+VocabLean.h"
 
 @interface SpellingTestCharacterCell ()
 
@@ -21,7 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:(CGRect)frame]) {
     _characterLabel = [[UILabel alloc] init];
-    self.characterLabel.textColor = [ColorManager textColor];
+    self.characterLabel.textColor = [UIColor textColor];
     self.characterLabel.textAlignment = NSTextAlignmentCenter;
     self.characterLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:self.characterLabel];
@@ -61,7 +61,7 @@
   if (selected) {
     self.backgroundColor = [UIColor grayColor];
   } else {
-    self.backgroundColor = [ColorManager backgroundColor];
+    self.backgroundColor = [UIColor backgroundColor];
   }
 }
 
