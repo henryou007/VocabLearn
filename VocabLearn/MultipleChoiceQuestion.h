@@ -18,5 +18,7 @@
 - (NSUInteger)getNumberOfQuestions;
 - (void)calculateNextRound;
 - (NSString *)getQuestion;
+- (BOOL)answerWithInt:(int)num;
+- (NSString *)getResultMessage;
 
 @end

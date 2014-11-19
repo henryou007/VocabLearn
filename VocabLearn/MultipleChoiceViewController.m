@@ -24,6 +24,9 @@ static const int kElementsPerLine = 5;
 @property (weak, nonatomic) IBOutlet UIButton *answerOneBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeBtn;
+@end
+
+@interface MultipleChoiceQuestion() <UIAlertViewDelegate>
 
 @end
 
@@ -34,6 +37,7 @@ static const int kElementsPerLine = 5;
   __weak IBOutlet UILabel *questionLabel;
   __weak IBOutlet UILabel *titleLabel;
   MultipleChoiceQuestion *_multipleChoiceQuestion;
+  BOOL lastRound;
   
 }
 
@@ -49,17 +53,22 @@ static const int kElementsPerLine = 5;
   return [_multipleChoiceQuestion getNumberOfQuestions];
 }
 
+
 - (void)_updateRound
 {
   [_multipleChoiceQuestion calculateNextRound];
   if (questionsAnswered < [self _getMaxNumberOfQuestions]) {
     titleLabel.text = [NSString stringWithFormat:@"Question %d of %ld:", questionsAnswered+1, [self _getMaxNumberOfQuestions]];
     questionLabel.text = [NSString stringWithFormat:@"'%@'", [_multipleChoiceQuestion getQuestion]];
-  } else {
-    [[[UIAlertView alloc] initWithTitle:@"Your Result:" message:@"TODO" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-  [appDelegate showMainRootController];
+    [_answerOneBtn setTitle:[NSString stringWithFormat:@"1. %@", [_multipleChoiceQuestion getAnswerForInt:0]] forState:UIControlStateNormal];
+    
+       [_answerTwoBtn setTitle:[NSString stringWithFormat:@"2. %@", [_multipleChoiceQuestion getAnswerForInt:1]] forState:UIControlStateNormal];
+    
+       [_answerThreeBtn setTitle:[NSString stringWithFormat:@"3. %@", [_multipleChoiceQuestion getAnswerForInt:2]] forState:UIControlStateNormal];
+    
+  } else {
+    lastRound = YES;
   }
 }
 
@@ -81,10 +90,16 @@ static const int kElementsPerLine = 5;
   btn.layer.borderWidth=1.0f;
   btn.layer.borderColor=[[UIColor whiteColor] CGColor];
   btn.clipsToBounds = YES;
+  btn.titleLabel.adjustsFontSizeToFitWidth = YES;
+  btn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+  btn.titleLabel.textAlignment=UITextAlignmentCenter;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
     questionsAnswered = 0;
   [self _updateRound];
   [self _styleButton:_answerOneBtn];
@@ -105,13 +120,23 @@ static const int kElementsPerLine = 5;
   [self animateResultWithColor:[UIColor wrongColor]];
 }
 - (IBAction)oneClick:(id)sender {
-  [self correctClick:sender];
+  [self _answerWithInt:0];
 }
 - (IBAction)twoClick:(id)sender {
-  [self wrongClick:sender];
+  [self _answerWithInt:1];
+
 }
 - (IBAction)threeClick:(id)sender {
-  [self wrongClick:sender];
+  [self _answerWithInt:2];
+}
+
+- (void)_answerWithInt:(int)num
+{
+  if ([_multipleChoiceQuestion answerWithInt:num]) {
+    [self correctClick:self];
+  } else {
+    [self wrongClick:self];
+  }
 }
 
 - (void)animateResultWithColor:(UIColor *)color {
@@ -146,13 +171,14 @@ static const int kElementsPerLine = 5;
       questionsAnswered += 1;
       [self _updateRound];
     
-      
-      [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        CGRect helpFrame = _testView.frame;
-        helpFrame.origin.x -= self.view.frame.size.width;
-        _testView.frame = helpFrame;
-        _testView.alpha = 1;
-      } completion:nil];
+      if (!lastRound) {
+        [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+          CGRect helpFrame = _testView.frame;
+          helpFrame.origin.x -= self.view.frame.size.width;
+          _testView.frame = helpFrame;
+          _testView.alpha = 1;
+        } completion:nil];
+      }
       
         [UIView animateWithDuration:0.5 delay:0.1 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         CGRect frame = myView.frame;
@@ -160,10 +186,22 @@ static const int kElementsPerLine = 5;
         frame.origin.y = [self _getYPos];
         myView.frame = frame;
       } completion:^(BOOL finished) {
-        
+        if (lastRound) {
+          NSString *resultMessage = [_multipleChoiceQuestion getResultMessage];
+          [[[UIAlertView alloc] initWithTitle:@"Your Result:" message:resultMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+          
+        }
       }];
     }];
   }];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+[appDelegate showMainRootController];
 }
 
 /*
