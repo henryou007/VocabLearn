@@ -24,6 +24,7 @@
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[self.class createViewLayout]]) {
     self.backgroundColor = [UIColor backgroundColor];
     self.dataSource = self;
+    self.delegate = self;
     [self registerClass:SpellingTestCharacterCell.class forCellWithReuseIdentifier:@"Cell"];
 
     _characters = [NSMutableArray array];
@@ -139,6 +140,10 @@
   SpellingTestCharacterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
   cell.character = self.characters[indexPath.row];
   return cell;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  return NO;
 }
 
 @end

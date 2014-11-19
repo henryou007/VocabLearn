@@ -21,6 +21,7 @@
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]]) {
     self.backgroundColor = [UIColor backgroundColor];
     self.dataSource = self;
+    self.delegate = self;
     [self registerClass:SpellingTestCharacterCell.class forCellWithReuseIdentifier:@"Cell"];
 
     [self addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)]];
@@ -81,6 +82,10 @@
   SpellingTestCharacterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
   cell.character = self.characters[indexPath.row];
   return cell;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  return NO;
 }
 
 @end
