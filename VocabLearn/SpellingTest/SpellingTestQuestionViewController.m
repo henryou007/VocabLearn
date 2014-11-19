@@ -9,11 +9,12 @@
 #import "SpellingTestQuestionViewController.h"
 
 #import "SpellingTestCharacter.h"
+#import "SpellingTestCharacterView.h"
 #import "SpellingTestCharacterPickerView.h"
 #import "SpellingTestGuessingAreaView.h"
 #import "UIColor+VocabLean.h"
 
-@interface SpellingTestQuestionViewController () <SpellingTestCharacterPickerViewDelegate, SpellingTestGuessingAreaViewDelegate, UIAlertViewDelegate>
+@interface SpellingTestQuestionViewController () <SpellingTestCharacterPickerViewDelegate, SpellingTestGuessingAreaViewDelegate, UIAlertViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong, readonly) SpellingTestTestController *testController;
 @property (nonatomic, strong, readwrite) SpellingTestQuestion *question;
@@ -22,6 +23,9 @@
 @property (nonatomic, strong, readonly) UILabel *meaningLabel;
 @property (nonatomic, strong, readonly) SpellingTestCharacterPickerView *characterPickerView;
 @property (nonatomic, strong, readonly) UIButton *deleteButton;
+
+@property (nonatomic, strong, readwrite) SpellingTestCharacterView *panningCharacterView;
+@property (nonatomic, assign, readwrite) BOOL paddingCharacterCameFromPicker;
 
 @end
 
@@ -64,6 +68,10 @@
   [self.view addSubview:self.characterPickerView];
   [self.view addSubview:self.deleteButton];
 
+  UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)];
+  panGestureRecognizer.delegate = self;
+  [self.view addGestureRecognizer:panGestureRecognizer];
+
   [self.view setNeedsUpdateConstraints];
 }
 
@@ -101,6 +109,15 @@
   self.question = [self.testController nextQuestion];
 }
 
+- (void)startPanningCharacter:(SpellingTestCharacter *)character fromPicker:(BOOL)fromPicker{
+  self.paddingCharacterCameFromPicker = fromPicker;
+
+  self.panningCharacterView = [[SpellingTestCharacterView alloc] init];
+  self.panningCharacterView.character = character;
+  self.panningCharacterView.hidden = YES;
+  [self.view addSubview:self.panningCharacterView];
+}
+
 #pragma mark - Getters/Setters
 
 @synthesize question = _question;
@@ -116,20 +133,19 @@
 
 #pragma mark - SpellingTestCharacterPickerViewDelegate
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
-  [self.guessingAreaView addCharacter:character];
-  self.deleteButton.enabled = YES;
+- (UIView *)referenceView {
+  return self.view;
 }
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
-  [self.guessingAreaView removeCharacter:character];
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index location:(CGPoint)location {
+  [self startPanningCharacter:character fromPicker:YES];
 }
 
 #pragma mark - SpellingTestGuessingAreaViewDelegate
 
 - (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didSelectNonEmptyCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index {
   [guessingAreaView removeCharacterAtIndex:index];
-  [self.characterPickerView deselectCharacter:character];
+  [self startPanningCharacter:character fromPicker:NO];
 }
 
 - (void)guessingAreaView:(SpellingTestGuessingAreaView *)guessingAreaView didReachCharacterLengthWithCharacters:(NSArray *)characters {
@@ -141,6 +157,42 @@
 
 - (void)guessingAreaViewDidHaveNoCharacters:(SpellingTestGuessingAreaView *)guessingAreaView {
   self.deleteButton.enabled = NO;
+}
+
+#pragma mark - UIGestureRecognizerDelegate and handle gesture
+
+- (void)onPan:(UIPanGestureRecognizer *)panGestureRecognizer {
+  if (self.panningCharacterView) {
+    switch (panGestureRecognizer.state) {
+      case UIGestureRecognizerStateChanged:
+      {
+        self.panningCharacterView.center = [panGestureRecognizer locationInView:self.view];
+        self.panningCharacterView.hidden = NO;
+        break;
+      }
+      case UIGestureRecognizerStateEnded:
+      {
+        CGPoint point = [panGestureRecognizer locationInView:self.view];
+        if ((self.paddingCharacterCameFromPicker && CGRectContainsPoint(self.guessingAreaView.frame, point)) || (!self.paddingCharacterCameFromPicker && !CGRectContainsPoint(self.characterPickerView.frame, point))) {
+          // Give to the guessing view
+          [self.guessingAreaView addCharacter:self.panningCharacterView.character];
+          self.deleteButton.enabled = YES;
+        } else {
+          // Return to the picker view
+          [self.characterPickerView deselectCharacter:self.panningCharacterView.character];
+        }
+        [self.panningCharacterView removeFromSuperview];
+        self.panningCharacterView = nil;
+        break;
+      }
+      default:
+        break;
+    }
+  }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+  return YES;
 }
 
 #pragma mark - Delete Button

@@ -24,12 +24,24 @@
   if (self = [super initWithFrame:CGRectZero collectionViewLayout:[self.class createViewLayout]]) {
     self.backgroundColor = [UIColor backgroundColor];
     self.dataSource = self;
-    self.delegate = self;
     [self registerClass:SpellingTestCharacterCell.class forCellWithReuseIdentifier:@"Cell"];
 
     _characters = [NSMutableArray array];
+
+    [self addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)]];
   }
   return self;
+}
+
+- (void)onPan:(UIPanGestureRecognizer *)panGestureRecognizer {
+  if (panGestureRecognizer.state == UIGestureRecognizerStateBegan) {
+    CGPoint point = [panGestureRecognizer locationInView:self];
+    NSIndexPath *indexPath = [self indexPathForItemAtPoint:point];
+    if (indexPath && indexPath.row < self.nextCharacterIndex) {
+      NSUInteger index = indexPath.row;
+      [self.guessingAreaDelegate guessingAreaView:self didSelectNonEmptyCharacter:self.characters[index] atIndex:index];
+    }
+  }
 }
 
 #pragma mark - Getters/Setters
@@ -127,20 +139,6 @@
   SpellingTestCharacterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
   cell.character = self.characters[indexPath.row];
   return cell;
-}
-
-#pragma mark - UICollectionViewDelegate
-
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  return indexPath.row < self.nextCharacterIndex;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  [self deselectItemAtIndexPath:indexPath animated:YES];
-  NSUInteger index = indexPath.row;
-  if (index < self.nextCharacterIndex) {
-    [self.guessingAreaDelegate guessingAreaView:self didSelectNonEmptyCharacter:self.characters[index] atIndex:index];
-  }
 }
 
 @end

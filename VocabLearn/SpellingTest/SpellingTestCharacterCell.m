@@ -8,11 +8,13 @@
 
 #import "SpellingTestCharacterCell.h"
 
+#import "SpellingTestCharacterView.h"
+
 #import "UIColor+VocabLean.h"
 
 @interface SpellingTestCharacterCell ()
 
-@property (nonatomic, strong, readonly) UILabel *characterLabel;
+@property (nonatomic, strong, readonly) SpellingTestCharacterView *characterView;
 
 @end
 
@@ -20,11 +22,9 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:(CGRect)frame]) {
-    _characterLabel = [[UILabel alloc] init];
-    self.characterLabel.textColor = [UIColor textColor];
-    self.characterLabel.textAlignment = NSTextAlignmentCenter;
-    self.characterLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addSubview:self.characterLabel];
+    _characterView = [[SpellingTestCharacterView alloc] init];
+    self.backgroundColor = [UIColor backgroundColor];
+    [self.contentView addSubview:self.characterView];
 
     [self setNeedsUpdateConstraints];
   }
@@ -32,7 +32,7 @@
 }
 
 - (void)updateConstraints {
-  NSDictionary *views = @{@"characterLabel": self.characterLabel};
+  NSDictionary *views = @{@"characterLabel": self.characterView};
 
   [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[characterLabel]-0-|"
                                                                            options:0
@@ -53,15 +53,15 @@
 
 - (void)setCharacter:(SpellingTestCharacter *)character {
   _character = character;
-  self.characterLabel.text = self.character.description;
+  self.characterView.character = self.character;
 }
 
 - (void)setSelected:(BOOL)selected {
   [super setSelected:selected];
   if (selected) {
-    self.backgroundColor = [UIColor grayColor];
+    self.hidden = YES;
   } else {
-    self.backgroundColor = [UIColor backgroundColor];
+    self.hidden = NO;
   }
 }
 

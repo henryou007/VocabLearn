@@ -37,6 +37,7 @@
 		EA78D3481A17D5E6002F9405 /* SpellingTestCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */; };
 		EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */; };
 		EA78D34E1A17D61C002F9405 /* SpellingTestGuessingAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */; };
+		EAA67BDB1A1C597600AD8779 /* SpellingTestCharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA67BDA1A1C597600AD8779 /* SpellingTestCharacterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterPickerView.m; path = SpellingTest/SpellingTestCharacterPickerView.m; sourceTree = "<group>"; };
 		EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestGuessingAreaView.h; path = SpellingTest/SpellingTestGuessingAreaView.h; sourceTree = "<group>"; };
 		EA78D34D1A17D61C002F9405 /* SpellingTestGuessingAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestGuessingAreaView.m; path = SpellingTest/SpellingTestGuessingAreaView.m; sourceTree = "<group>"; };
+		EAA67BD91A1C597600AD8779 /* SpellingTestCharacterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacterView.h; path = SpellingTest/SpellingTestCharacterView.h; sourceTree = "<group>"; };
+		EAA67BDA1A1C597600AD8779 /* SpellingTestCharacterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacterView.m; path = SpellingTest/SpellingTestCharacterView.m; sourceTree = "<group>"; };
 		F5DF1409AA78B25E9457D551 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +215,9 @@
 				A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */,
 				A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */,
 				A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */,
+				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
+				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
+				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,9 +266,6 @@
 		EA260A551A17C0CD0049D28F /* Spelling Test */ = {
 			isa = PBXGroup;
 			children = (
-				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
-				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
-				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
 				EA260A561A17C1A00049D28F /* SpellingTestWelcomeViewController.h */,
 				EA260A571A17C1A00049D28F /* SpellingTestWelcomeViewController.m */,
 				EA78D3391A17CDE7002F9405 /* SpellingTestTestController.h */,
@@ -281,6 +284,8 @@
 				EA78D33D1A17CED8002F9405 /* SpellingTestQuestionViewController.m */,
 				EA78D3461A17D5E6002F9405 /* SpellingTestCharacterCell.h */,
 				EA78D3471A17D5E6002F9405 /* SpellingTestCharacterCell.m */,
+				EAA67BD91A1C597600AD8779 /* SpellingTestCharacterView.h */,
+				EAA67BDA1A1C597600AD8779 /* SpellingTestCharacterView.m */,
 				EA78D3491A17D606002F9405 /* SpellingTestCharacterPickerView.h */,
 				EA78D34A1A17D606002F9405 /* SpellingTestCharacterPickerView.m */,
 				EA78D34C1A17D61C002F9405 /* SpellingTestGuessingAreaView.h */,
@@ -438,6 +443,7 @@
 				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
 				C70176D71A19C1A4003FC85F /* MultipleChoiceQuestion.m in Sources */,
+				EAA67BDB1A1C597600AD8779 /* SpellingTestCharacterView.m in Sources */,
 				C7424FA31A197A0300BF2D65 /* MultipleChoiceViewController.m in Sources */,
 				A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */,
 				A9EF20211A15CE390017089D /* VocabListCreationViewController.m in Sources */,

@@ -14,8 +14,9 @@
 
 @protocol SpellingTestCharacterPickerViewDelegate <NSObject>
 
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index;
-- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didDeselectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index;
+- (UIView *)referenceView;
+
+- (void)characterPickerView:(SpellingTestCharacterPickerView *)characterPickerView didSelectCharacter:(SpellingTestCharacter *)character atIndex:(NSUInteger)index location:(CGPoint)location;
 
 @end
 
