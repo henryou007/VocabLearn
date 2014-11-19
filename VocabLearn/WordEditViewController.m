@@ -7,10 +7,13 @@
 //
 
 #import "WordEditViewController.h"
+#import "UIColor+VocabLean.h"
 
 @interface WordEditViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *definitionTextView;
 @property (weak, nonatomic) IBOutlet UITextView *wordTextView;
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *definitionLabel;
 
 @property (assign, nonatomic) NSUInteger indexInList;
 @property (strong, nonatomic) NSString *initialWord;
@@ -47,10 +50,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.view.backgroundColor = [UIColor backgroundColor];
+    
+    self.wordLabel.textColor = [UIColor textColor];
+    self.definitionLabel.textColor = [UIColor textColor];
+    
+    self.wordTextView.backgroundColor = [UIColor backgroundColor];
+    self.wordTextView.textColor = [UIColor textColor];
     [[self.wordTextView layer] setBorderColor:[[UIColor lightGrayColor] CGColor]];
     [[self.wordTextView layer] setBorderWidth:1];
     [[self.wordTextView layer] setCornerRadius:5];
     
+    self.definitionTextView.backgroundColor = [UIColor backgroundColor];
+    self.definitionTextView.textColor = [UIColor textColor];
     [[self.definitionTextView layer] setBorderColor:[[UIColor lightGrayColor] CGColor]];
     [[self.definitionTextView layer] setBorderWidth:1];
     [[self.definitionTextView layer] setCornerRadius:5];
@@ -59,8 +71,6 @@
         self.wordTextView.text = self.initialWord;
         self.definitionTextView.text = self.initialDefinition;
     }
-    
-    
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Confirm" style:UIBarButtonItemStylePlain target:self action:@selector(onConfirmButtonClick)];
     

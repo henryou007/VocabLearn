@@ -27,7 +27,7 @@
 }
 
 + (UIColor *)tableViewSeparatorColor {
-  return [self customYellowColor];
+  return [self darkGrayColor];
 }
 
 + (UIColor *)correctColor {

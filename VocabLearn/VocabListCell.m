@@ -7,6 +7,7 @@
 //
 
 #import "VocabListCell.h"
+#import "UIColor+VocabLean.h"
 
 @interface VocabListCell ()
 
@@ -20,7 +21,8 @@
 - (void)awakeFromNib {
     // Initialization code
     self.listNameLabel.text = self.vocabList.listName;
-    
+    self.listNameLabel.textColor = [UIColor textColor];
+    self.backgroundColor = [UIColor backgroundColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

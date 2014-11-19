@@ -7,11 +7,20 @@
 //
 
 #import "WordCell.h"
+#import "UIColor+VocabLean.h"
+
+@interface WordCell ()
+@property (weak, nonatomic) IBOutlet UILabel *wordCell;
+
+@end
+
 
 @implementation WordCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.wordCell.textColor = [UIColor textColor];
+    self.backgroundColor = [UIColor backgroundColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

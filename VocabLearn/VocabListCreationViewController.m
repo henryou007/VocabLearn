@@ -8,6 +8,7 @@
 
 #import "VocabListCreationViewController.h"
 #import "VocabListStore.h"
+#import "UIColor+VocabLean.h"
 
 @interface VocabListCreationViewController ()
 
@@ -43,6 +44,8 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Confirm" style:UIBarButtonItemStylePlain target:self action:@selector(onConfirmButtonClick)];
+    
+    self.view.backgroundColor = [UIColor backgroundColor];
     
     if (!self.isCreation) {
         self.listNameInput.text = [[VocabListStore sharedInstance] getVocabListAtIndex:self.vocabListIndex].listName;

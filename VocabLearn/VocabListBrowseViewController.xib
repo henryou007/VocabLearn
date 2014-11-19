@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VocabListBrowseViewController">
             <connections>
+                <outlet property="addWordButton" destination="Uol-K5-3bQ" id="N3D-Ur-vYN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wordsTableView" destination="UOq-od-mL1" id="ZNe-Nc-taj"/>
             </connections>
@@ -16,15 +17,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UOq-od-mL1">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="513"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uol-K5-3bQ">
-                    <rect key="frame" x="0.0" y="521" width="320" height="47"/>
+                    <rect key="frame" x="0.0" y="527" width="320" height="41"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47" id="y3a-Nr-Lrh"/>
+                        <constraint firstAttribute="height" constant="41" id="y3a-Nr-Lrh"/>
                     </constraints>
                     <state key="normal" title="Add Word">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -39,7 +41,7 @@
                 <constraint firstAttribute="trailing" secondItem="Uol-K5-3bQ" secondAttribute="trailing" id="NU7-ch-ZQE"/>
                 <constraint firstAttribute="bottom" secondItem="Uol-K5-3bQ" secondAttribute="bottom" id="Po8-Qj-5td"/>
                 <constraint firstItem="Uol-K5-3bQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Thg-ZP-A4k"/>
-                <constraint firstItem="Uol-K5-3bQ" firstAttribute="top" secondItem="UOq-od-mL1" secondAttribute="bottom" constant="8" id="Y3k-R2-WHG"/>
+                <constraint firstItem="Uol-K5-3bQ" firstAttribute="top" secondItem="UOq-od-mL1" secondAttribute="bottom" constant="2" id="Y3k-R2-WHG"/>
                 <constraint firstItem="UOq-od-mL1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xan-cg-cC0"/>
             </constraints>
             <point key="canvasLocation" x="232" y="243"/>

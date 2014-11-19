@@ -15,10 +15,12 @@
 #import "MultipleChoiceViewController.h"
 #import "SpellingTestWelcomeViewController.h"
 #import "TestMenuViewController.h"
+#import "UIColor+VocabLean.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate, UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
 @property (weak, nonatomic) IBOutlet UITableView *vocabListTableView;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UIButton *createListButton;
 @property (assign, nonatomic) BOOL isPresenting;
 
 @end
@@ -29,12 +31,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
     [self.testButton setBackgroundImage:[UIImage imageNamed:@"main_page_background"] forState:UIControlStateNormal];
     [self.testButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
     self.vocabListTableView.dataSource = self;
     self.vocabListTableView.delegate = self;
     self.vocabListTableView.rowHeight = UITableViewAutomaticDimension;
+    self.vocabListTableView.backgroundColor = [UIColor backgroundColor];
+    self.vocabListTableView.separatorColor = [UIColor tableViewSeparatorColor];
+    
+    self.createListButton.backgroundColor = [UIColor darkGrayColor];
+    self.createListButton.clipsToBounds = YES;
+    
+    
     self.title = @"VocabLearn";
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.translucent = NO;

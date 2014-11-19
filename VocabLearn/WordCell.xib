@@ -22,6 +22,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="wordCell" destination="HXr-TQ-Wma" id="N1q-qL-KFh"/>
                 <outlet property="wordLabel" destination="HXr-TQ-Wma" id="DTN-4J-Drd"/>
             </connections>
         </tableViewCell>

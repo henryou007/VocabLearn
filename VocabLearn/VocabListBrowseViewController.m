@@ -11,11 +11,13 @@
 #import "VocabListStore.h"
 #import "WordCell.h"
 #import "WordEditViewController.h"
+#import "UIColor+VocabLean.h"
 
 @interface VocabListBrowseViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, WordEditViewControllerDelegate>
 
 @property (assign, nonatomic) NSUInteger index;
 @property (weak, nonatomic) IBOutlet UITableView *wordsTableView;
+@property (weak, nonatomic) IBOutlet UIButton *addWordButton;
 @property (strong, nonatomic) VocabList *currentVocabList;
 
 @end
@@ -35,9 +37,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
     self.wordsTableView.dataSource = self;
     self.wordsTableView.delegate = self;
     self.wordsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.wordsTableView.backgroundColor = [UIColor backgroundColor];
+    self.wordsTableView.separatorColor = [UIColor tableViewSeparatorColor];
+    
+    self.addWordButton.backgroundColor = [UIColor darkGrayColor];
     
     self.currentVocabList = [[VocabListStore sharedInstance] getVocabListAtIndex:self.index];
     self.title = self.currentVocabList.listName;
