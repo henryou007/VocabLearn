@@ -9,6 +9,7 @@
                 <outlet property="answerOneBtn" destination="s5a-bO-znV" id="w1x-GZ-X6G"/>
                 <outlet property="answerThreeBtn" destination="toO-ch-Kew" id="DMc-Kv-oGd"/>
                 <outlet property="answerTwoBtn" destination="FXi-fH-e7g" id="lNd-bm-eg0"/>
+                <outlet property="meaningLabel" destination="6Zh-qt-JD5" id="oxb-lQ-lBQ"/>
                 <outlet property="questionLabel" destination="YNk-np-oLX" id="wMy-5q-gVk"/>
                 <outlet property="testView" destination="Bnk-FK-qbg" id="kuu-AL-7C4"/>
                 <outlet property="titleLabel" destination="3R3-WM-Oep" id="2PU-pw-xj3"/>

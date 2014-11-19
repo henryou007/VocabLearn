@@ -23,6 +23,7 @@ static const int kElementsPerLine = 5;
 @property (weak, nonatomic) IBOutlet UIView *testView;
 @property (weak, nonatomic) IBOutlet UIButton *answerOneBtn;
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoBtn;
+@property (weak, nonatomic) IBOutlet UILabel *meaningLabel;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeBtn;
 @end
 
@@ -88,17 +89,29 @@ static const int kElementsPerLine = 5;
 {
   btn.layer.cornerRadius = 10;
   btn.layer.borderWidth=1.0f;
-  btn.layer.borderColor=[[UIColor whiteColor] CGColor];
+  btn.layer.borderColor=[[UIColor textColor] CGColor];
   btn.clipsToBounds = YES;
   btn.titleLabel.adjustsFontSizeToFitWidth = YES;
   btn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
   btn.titleLabel.textAlignment=UITextAlignmentCenter;
+  
+  btn.titleLabel.textColor = [UIColor textColor];
+  btn.titleLabel.tintColor = [UIColor textColor];
+  [btn setTitleColor:[UIColor textColor] forState:UIControlStateNormal];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+  questionLabel.textColor = [UIColor textColor];
+  titleLabel.textColor = [UIColor textColor];
+  self.view.backgroundColor = [UIColor backgroundColor];
+  self.meaningLabel.textColor = [UIColor textColor];
+  
+  _testView.layer.borderWidth=1.0f;
+  _testView.layer.borderColor=[[UIColor textColor] CGColor];
+  _testView.backgroundColor = [UIColor backgroundColor];
+  
 
     questionsAnswered = 0;
   [self _updateRound];
@@ -189,7 +202,6 @@ static const int kElementsPerLine = 5;
         if (lastRound) {
           NSString *resultMessage = [_multipleChoiceQuestion getResultMessage];
           [[[UIAlertView alloc] initWithTitle:@"Your Result:" message:resultMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-          
         }
       }];
     }];
