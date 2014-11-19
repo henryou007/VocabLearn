@@ -11,8 +11,20 @@
 @interface VocabList : NSObject
 
 @property (strong, nonatomic) NSString *listName;
-@property (strong, nonatomic) NSDictionary *vocabulary;
+@property (strong, nonatomic) NSMutableDictionary *vocabulary;
 
 - (id)initWithListName:(NSString *)listName;
+
+- (NSUInteger)listSize;
+
+- (NSString *)wordAtIndex:(NSUInteger)index;
+
+- (void)removeWordAtIndex:(NSUInteger)index;
+
+- (void)addWord:(NSString *)word withDefinition:(NSString *)definition;
+
+- (void)addWordsWithDefinition:(NSDictionary *)dictionary;
+
+- (void)updateWordAtIndex:(NSUInteger)index withWord:(NSString *)word andDefinition:(NSString *)definition;
 
 @end

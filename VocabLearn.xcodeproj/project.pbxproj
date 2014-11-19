@@ -11,6 +11,10 @@
 		A9168D3B1A199D1A00D27333 /* TestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9168D391A199D1A00D27333 /* TestMenuViewController.m */; };
 		A9168D3C1A199D1A00D27333 /* TestMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */; };
 		A92FCCB71A196DF100B16E9B /* SpellingTestCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = A92FCCB61A196DF100B16E9B /* SpellingTestCharacter.m */; };
+		A962BD8F1A1C6C38003652C1 /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A962BD8D1A1C6C38003652C1 /* WordCell.m */; };
+		A962BD901A1C6C38003652C1 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A962BD8E1A1C6C38003652C1 /* WordCell.xib */; };
+		A962BD941A1C79E8003652C1 /* WordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A962BD921A1C79E8003652C1 /* WordEditViewController.m */; };
+		A962BD951A1C79E8003652C1 /* WordEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A962BD931A1C79E8003652C1 /* WordEditViewController.xib */; };
 		A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B271A1703FC003EB8FE /* VocabListStore.m */; };
 		A9632B2C1A173C5E003EB8FE /* VocabListBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9632B2A1A173C5E003EB8FE /* VocabListBrowseViewController.m */; };
 		A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9632B2B1A173C5E003EB8FE /* VocabListBrowseViewController.xib */; };
@@ -58,6 +62,12 @@
 		A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestMenuViewController.xib; sourceTree = "<group>"; };
 		A92FCCB51A196DF100B16E9B /* SpellingTestCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellingTestCharacter.h; path = SpellingTest/SpellingTestCharacter.h; sourceTree = "<group>"; };
 		A92FCCB61A196DF100B16E9B /* SpellingTestCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpellingTestCharacter.m; path = SpellingTest/SpellingTestCharacter.m; sourceTree = "<group>"; };
+		A962BD8C1A1C6C38003652C1 /* WordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCell.h; sourceTree = "<group>"; };
+		A962BD8D1A1C6C38003652C1 /* WordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCell.m; sourceTree = "<group>"; };
+		A962BD8E1A1C6C38003652C1 /* WordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCell.xib; sourceTree = "<group>"; };
+		A962BD911A1C79E8003652C1 /* WordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordEditViewController.h; sourceTree = "<group>"; };
+		A962BD921A1C79E8003652C1 /* WordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordEditViewController.m; sourceTree = "<group>"; };
+		A962BD931A1C79E8003652C1 /* WordEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordEditViewController.xib; sourceTree = "<group>"; };
 		A9632B261A1703FC003EB8FE /* VocabListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListStore.h; sourceTree = "<group>"; };
 		A9632B271A1703FC003EB8FE /* VocabListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListStore.m; sourceTree = "<group>"; };
 		A9632B291A173C5E003EB8FE /* VocabListBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListBrowseViewController.h; sourceTree = "<group>"; };
@@ -218,6 +228,9 @@
 				A9168D381A199D1A00D27333 /* TestMenuViewController.h */,
 				A9168D391A199D1A00D27333 /* TestMenuViewController.m */,
 				A9168D3A1A199D1A00D27333 /* TestMenuViewController.xib */,
+				A962BD911A1C79E8003652C1 /* WordEditViewController.h */,
+				A962BD921A1C79E8003652C1 /* WordEditViewController.m */,
+				A962BD931A1C79E8003652C1 /* WordEditViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +252,9 @@
 				A9EF20191A15CBF40017089D /* VocabListCell.h */,
 				A9EF201A1A15CBF40017089D /* VocabListCell.m */,
 				A9EF201B1A15CBF40017089D /* VocabListCell.xib */,
+				A962BD8C1A1C6C38003652C1 /* WordCell.h */,
+				A962BD8D1A1C6C38003652C1 /* WordCell.m */,
+				A962BD8E1A1C6C38003652C1 /* WordCell.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -378,10 +394,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A962BD951A1C79E8003652C1 /* WordEditViewController.xib in Resources */,
 				A9632B2D1A173C5E003EB8FE /* VocabListBrowseViewController.xib in Resources */,
 				C7424FA41A197A0300BF2D65 /* MultipleChoiceViewController.xib in Resources */,
 				A9EF1FFA1A15C5800017089D /* LaunchScreen.xib in Resources */,
 				A9EF201D1A15CBF40017089D /* VocabListCell.xib in Resources */,
+				A962BD901A1C6C38003652C1 /* WordCell.xib in Resources */,
 				A9EF20131A15C5A50017089D /* MainViewController.xib in Resources */,
 				A9EF1FF71A15C5800017089D /* Images.xcassets in Resources */,
 				A9EF20221A15CE390017089D /* VocabListCreationViewController.xib in Resources */,
@@ -441,6 +459,7 @@
 				A9EF1FEF1A15C5800017089D /* AppDelegate.m in Sources */,
 				A9168D3B1A199D1A00D27333 /* TestMenuViewController.m in Sources */,
 				EA78D34B1A17D606002F9405 /* SpellingTestCharacterPickerView.m in Sources */,
+				A962BD8F1A1C6C38003652C1 /* WordCell.m in Sources */,
 				A9632B281A1703FC003EB8FE /* VocabListStore.m in Sources */,
 				C70176D71A19C1A4003FC85F /* MultipleChoiceQuestion.m in Sources */,
 				EAA67BDB1A1C597600AD8779 /* SpellingTestCharacterView.m in Sources */,
@@ -457,6 +476,7 @@
 				A92FCCB71A196DF100B16E9B /* SpellingTestCharacter.m in Sources */,
 				EA78D33B1A17CDE7002F9405 /* SpellingTestTestController.m in Sources */,
 				EA78D3411A17D315002F9405 /* SpellingTestQuestion.m in Sources */,
+				A962BD941A1C79E8003652C1 /* WordEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

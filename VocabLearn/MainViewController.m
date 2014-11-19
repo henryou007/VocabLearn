@@ -16,7 +16,7 @@
 #import "SpellingTestWelcomeViewController.h"
 #import "TestMenuViewController.h"
 
-@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate, UIViewControllerTransitioningDelegate>
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate, TestMenuViewControllerDelegate, UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
 @property (weak, nonatomic) IBOutlet UITableView *vocabListTableView;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
 @property (assign, nonatomic) BOOL isPresenting;
@@ -85,7 +85,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController pushViewController:[[VocabListBrowseViewController alloc] init] animated:YES];
+    VocabListBrowseViewController *browseViewController = [[VocabListBrowseViewController alloc] initWithListIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:browseViewController animated:YES];
 }
 
 

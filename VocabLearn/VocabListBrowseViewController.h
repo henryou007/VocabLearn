@@ -10,4 +10,6 @@
 
 @interface VocabListBrowseViewController : UIViewController
 
+-(id)initWithListIndex:(NSUInteger)index;
+
 @end
